@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Table Dorée — Restaurant Gastronomique à Paris</title>
+    <meta
+      name="description"
+      content="La Table Dorée, restaurant gastronomique au cœur de Paris (1er arr.) : cuisine française raffinée, cave à vins d'exception, réceptions privées. Réservez votre table."
+    />
+    <meta
+      name="keywords"
+      content="restaurant gastronomique paris, restaurant français, réservation restaurant paris, cuisine française raffinée, restaurant 1er arrondissement"
+    />
+    <meta name="author" content="La Table Dorée" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#14110f" />
+    <link rel="canonical" href="https://www.latabledoree.example/" />
+
+    <!-- Open Graph / réseaux sociaux -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="La Table Dorée" />
+    <meta
+      property="og:title"
+      content="La Table Dorée — Restaurant Gastronomique à Paris"
+    />
+    <meta
+      property="og:description"
+      content="Une expérience gastronomique d'exception au cœur de Paris. Découvrez notre cuisine, notre galerie et réservez votre table en ligne."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+    />
+    <meta property="og:url" content="https://www.latabledoree.example/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="La Table Dorée — Restaurant Gastronomique à Paris"
+    />
+    <meta
+      name="twitter:description"
+      content="Cuisine française raffinée, cave à vins d'exception et ambiance intimiste au cœur de Paris."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+    />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%BD%EF%B8%8F%3C/text%3E%3C/svg%3E"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "La Table Dorée",
+        "image": [
+          "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+        ],
+        "url": "https://www.latabledoree.example/",
+        "telephone": "+33123456789",
+        "email": "contact@latabledoree.example",
+        "priceRange": "€€€",
+        "servesCuisine": ["Française", "Gastronomique"],
+        "acceptsReservations": "True",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "8 Rue Saint-Honoré",
+          "addressLocality": "Paris",
+          "postalCode": "75001",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.8625,
+          "longitude": 2.335
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "12:00",
+            "closes": "14:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "19:00",
+            "closes": "22:30"
+          }
+        ],
+        "menu": "https://www.latabledoree.example/#services"
+      }
+    </script>
+  </head>
+
+  <body>
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a href="#home" class="brand">
+          <span class="brand-mark" aria-hidden="true">🍷</span>
+          <span class="brand-text">La Table Dorée</span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+          <ul>
+            <li><a href="#home" class="nav-link">Accueil</a></li>
+            <li><a href="#about" class="nav-link">Présentation</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#gallery" class="nav-link">Galerie</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="tel:+33123456789" class="btn-call">
+            <span aria-hidden="true">📞</span>
+            <span>01 23 45 67 89</span>
+          </a>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="mainNav"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Accueil / Hero -->
+      <section id="home" class="hero">
+        <div class="hero-media">
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80"
+            alt="Salle du restaurant La Table Dorée élégamment dressée avec un éclairage tamisé"
+            class="hero-img"
+            fetchpriority="high"
+          />
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+          <p class="eyebrow">✨ Depuis 2010 · Cuisine Française Raffinée</p>
+          <h1>La Table Dorée</h1>
+          <p class="hero-subtitle">
+            Une expérience gastronomique d'exception au cœur de Paris, où
+            produits d'exception et savoir-faire artisanal se rencontrent dans
+            l'assiette.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-gold">Réserver une table</a>
+            <a href="#gallery" class="btn btn-outline">Découvrir la galerie</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>15+</strong><span>Années d'expérience</span></li>
+            <li><strong>4.9/5</strong><span>Avis clients</span></li>
+            <li><strong>40</strong><span>Couverts</span></li>
+          </ul>
+        </div>
+        <a
+          href="#about"
+          class="scroll-indicator"
+          aria-label="Défiler vers la section suivante"
+          ><span></span
+        ></a>
+      </section>
+
+      <!-- Présentation -->
+      <section id="about" class="about">
+        <div class="container about-grid">
+          <div class="about-media">
+            <img
+              class="about-img-main"
+              loading="lazy"
+              decoding="async"
+              src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=900&q=80"
+              alt="Le chef de La Table Dorée dressant un plat gastronomique avec précision"
+            />
+            <img
+              class="about-img-secondary"
+              loading="lazy"
+              decoding="async"
+              src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=700&q=80"
+              alt="Salle à manger raffinée du restaurant La Table Dorée"
+            />
+            <div class="about-badge">
+              <strong>15</strong><span>ans d'excellence</span>
+            </div>
+          </div>
+          <div class="about-content">
+            <span class="section-label">Présentation</span>
+            <h2 class="section-title">Notre histoire, notre passion</h2>
+            <p>
+              Fondée en 2010 au cœur du 1<sup>er</sup> arrondissement de Paris,
+              La Table Dorée est née d'une passion : sublimer les produits du
+              terroir français dans une cuisine à la fois généreuse et raffinée.
+            </p>
+            <p>
+              Chaque assiette raconte une histoire : celle d'un maraîcher
+              normand, d'un vigneron bourguignon ou d'un pêcheur breton. Notre
+              chef exécutif compose une carte évolutive au fil des saisons, dans
+              le respect d'une tradition culinaire exigeante.
+            </p>
+            <div class="chef-card">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=200&q=80"
+                alt="Portrait du chef exécutif de La Table Dorée"
+              />
+              <div>
+                <strong>Antoine Lefèvre</strong>
+                <span>Chef Exécutif</span>
+              </div>
+            </div>
+            <ul class="about-highlights">
+              <li>🌿 Produits locaux &amp; de saison</li>
+              <li>🍷 Cave à vins de plus de 200 références</li>
+              <li>🕯️ Salle intimiste de 40 couverts</li>
+              <li>📖 Menu renouvelé chaque saison</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="services">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Services</span>
+            <h2 class="section-title">Ce que nous proposons</h2>
+            <p class="section-subtitle">
+              Bien plus qu'un dîner : une expérience sur mesure, à chaque
+              occasion.
+            </p>
+          </div>
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-media">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=700&q=80"
+                  alt="Assiette du menu dégustation de La Table Dorée"
+                />
+                <span class="service-icon" aria-hidden="true">🍽️</span>
+              </div>
+              <h3>Menu Dégustation</h3>
+              <p>
+                Un voyage culinaire en 7 services, accords mets &amp; vins sur
+                demande, pour une expérience gastronomique complète.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-media">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80"
+                  alt="Cave à vins de La Table Dorée avec plus de 200 références"
+                />
+                <span class="service-icon" aria-hidden="true">🍷</span>
+              </div>
+              <h3>Cave à Vins</h3>
+              <p>
+                Plus de 200 références sélectionnées par notre sommelier, des
+                grands crus classés aux pépites de vignerons indépendants.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-media">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80"
+                  alt="Table dressée pour un événement privé à La Table Dorée"
+                />
+                <span class="service-icon" aria-hidden="true">🎉</span>
+              </div>
+              <h3>Réceptions &amp; Événements</h3>
+              <p>
+                Privatisez notre salle pour vos dîners d'affaires, anniversaires
+                ou mariages, jusqu'à 40 convives.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-media">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=700&q=80"
+                  alt="Ambiance chaleureuse de la terrasse de La Table Dorée"
+                />
+                <span class="service-icon" aria-hidden="true">☀️</span>
+              </div>
+              <h3>Terrasse &amp; Ambiance</h3>
+              <p>
+                Profitez de notre terrasse chauffée et de notre ambiance
+                feutrée, idéale pour un déjeuner comme pour un dîner romantique.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-media">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=700&q=80"
+                  alt="Atelier de cuisine animé par le chef de La Table Dorée"
+                />
+                <span class="service-icon" aria-hidden="true">👨‍🍳</span>
+              </div>
+              <h3>Cours de Cuisine</h3>
+              <p>
+                Initiez-vous aux techniques de notre chef lors d'ateliers privés
+                en petit groupe, autour d'un menu de saison.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-media">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=700&q=80"
+                  alt="Plat signature de La Table Dorée préparé pour la vente à emporter"
+                />
+                <span class="service-icon" aria-hidden="true">🥡</span>
+              </div>
+              <h3>Click &amp; Collect</h3>
+              <p>
+                Commandez nos plats signature à emporter et savourez la cuisine
+                de La Table Dorée où que vous soyez.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bannière réservation -->
+      <section class="cta-banner">
+        <div class="hero-media">
+          <img
+            src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=75"
+            alt="Salle du restaurant éclairée à la bougie en soirée"
+            loading="lazy"
+            decoding="async"
+            class="hero-img"
+          />
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="container cta-content">
+          <h2>Envie d'une soirée d'exception ?</h2>
+          <p>
+            Réservez dès maintenant votre table et laissez-nous vous surprendre.
+          </p>
+          <div class="hero-cta">
+            <a href="tel:+33123456789" class="btn btn-gold">📞 Appelez-nous</a>
+            <a href="#contact" class="btn btn-outline">Réserver en ligne</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galerie -->
+      <section id="gallery" class="gallery">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Galerie</span>
+            <h2 class="section-title">Un aperçu en images</h2>
+            <p class="section-subtitle">
+              Découvrez nos plats signature, nos desserts et l'atmosphère unique
+              de notre salle.
+            </p>
+          </div>
+
+          <div
+            class="gallery-filters"
+            role="tablist"
+            aria-label="Filtrer la galerie"
+          >
+            <button
+              class="filter-btn active"
+              data-filter="all"
+              role="tab"
+              aria-selected="true"
+            >
+              Tous
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="plats"
+              role="tab"
+              aria-selected="false"
+            >
+              Plats
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="desserts"
+              role="tab"
+              aria-selected="false"
+            >
+              Desserts
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="ambiance"
+              role="tab"
+              aria-selected="false"
+            >
+              Ambiance
+            </button>
+          </div>
+
+          <div class="gallery-grid" id="galleryGrid">
+            <figure class="gallery-item" data-category="plats">
+              <button type="button" class="gallery-trigger">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80"
+                  alt="Filet de bœuf Rossini, sauce Périgueux"
+                />
+              </button>
+              <figcaption>Filet de bœuf Rossini, sauce Périgueux</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="desserts">
+              <button type="button" class="gallery-trigger">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=700&q=80"
+                  alt="Assiette signature du chef, dressage minute"
+                />
+              </button>
+              <figcaption>
+                Assiette signature du chef, dressage minute
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="desserts">
+              <button type="button" class="gallery-trigger">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?auto=format&fit=crop&w=700&q=80"
+                  alt="Tartelette au citron de Menton et meringue"
+                />
+              </button>
+              <figcaption>Tartelette au citron de Menton, meringue</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="plats">
+              <button type="button" class="gallery-trigger">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=700&q=80"
+                  alt="Sélection de mises en bouche du marché"
+                />
+              </button>
+              <figcaption>Sélection de mises en bouche du marché</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="ambiance">
+              <button type="button" class="gallery-trigger">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80"
+                  alt="Salle principale aux chandelles"
+                />
+              </button>
+              <figcaption>Salle principale aux chandelles</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="plats">
+              <button type="button" class="gallery-trigger">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=700&q=80"
+                  alt="Pièce de bœuf maturée et légumes de saison"
+                />
+              </button>
+              <figcaption>Pièce de bœuf maturée, légumes de saison</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="desserts">
+              <button type="button" class="gallery-trigger">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=700&q=80"
+                  alt="Dessert signature au chocolat grand cru"
+                />
+              </button>
+              <figcaption>Dessert signature, chocolat grand cru</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="ambiance">
+              <button type="button" class="gallery-trigger">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=700&q=80"
+                  alt="Ambiance chaleureuse de la salle"
+                />
+              </button>
+              <figcaption>Ambiance chaleureuse de la salle</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="plats">
+              <button type="button" class="gallery-trigger">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=700&q=80"
+                  alt="Poisson du jour, émulsion au beurre blanc"
+                />
+              </button>
+              <figcaption>Poisson du jour, émulsion au beurre blanc</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="plats">
+              <button type="button" class="gallery-trigger">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?auto=format&fit=crop&w=700&q=80"
+                  alt="Création du chef, dressage gastronomique"
+                />
+              </button>
+              <figcaption>Création du chef, dressage gastronomique</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="desserts">
+              <button type="button" class="gallery-trigger">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1607330289024-1535c6b4e1c1?auto=format&fit=crop&w=700&q=80"
+                  alt="Douceur sucrée aux fruits de saison"
+                />
+              </button>
+              <figcaption>Douceur sucrée, fruits de saison</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="ambiance">
+              <button type="button" class="gallery-trigger">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=700&q=80"
+                  alt="Vue d'ensemble de la salle à manger"
+                />
+              </button>
+              <figcaption>Vue d'ensemble de notre salle à manger</figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="plats">
+              <button type="button" class="gallery-trigger">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=700&q=80"
+                  alt="Plat signature vu de dessus"
+                />
+              </button>
+              <figcaption>Plat signature, vue de dessus</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox -->
+      <div
+        class="lightbox"
+        id="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Visionneuse d'image"
+        aria-hidden="true"
+      >
+        <button
+          type="button"
+          class="lightbox-close"
+          id="lightboxClose"
+          aria-label="Fermer la visionneuse"
+        >
+          ✕
+        </button>
+        <button
+          type="button"
+          class="lightbox-nav lightbox-prev"
+          id="lightboxPrev"
+          aria-label="Image précédente"
+        >
+          ‹
+        </button>
+        <figure class="lightbox-figure">
+          <img id="lightboxImg" src="" alt="" />
+          <figcaption id="lightboxCaption"></figcaption>
+        </figure>
+        <button
+          type="button"
+          class="lightbox-nav lightbox-next"
+          id="lightboxNext"
+          aria-label="Image suivante"
+        >
+          ›
+        </button>
+      </div>
+
+      <!-- Contact -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Contact</span>
+            <h2 class="section-title">Réservez votre table</h2>
+            <p class="section-subtitle">
+              Par téléphone ou via le formulaire, notre équipe vous répond sous
+              24h.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info">
+              <address>
+                <ul class="contact-details">
+                  <li>
+                    <span aria-hidden="true">📍</span> 8 Rue Saint-Honoré, 75001
+                    Paris, France
+                  </li>
+                  <li>
+                    <span aria-hidden="true">📞</span>
+                    <a href="tel:+33123456789">01 23 45 67 89</a>
+                  </li>
+                  <li>
+                    <span aria-hidden="true">✉️</span>
+                    <a href="mailto:contact@latabledoree.example"
+                      >contact@latabledoree.example</a
+                    >
+                  </li>
+                  <li>
+                    <span aria-hidden="true">🕒</span> Mar – Ven : 12h00–14h30
+                    &amp; 19h00–22h30<br />Samedi : 19h00–23h00 · Dimanche &amp;
+                    Lundi : Fermé
+                  </li>
+                </ul>
+              </address>
+              <div class="socials">
+                <a href="#" aria-label="La Table Dorée sur Instagram">📷</a>
+                <a href="#" aria-label="La Table Dorée sur Facebook">👍</a>
+                <a href="#" aria-label="La Table Dorée sur TripAdvisor">⭐</a>
+              </div>
+              <a href="tel:+33123456789" class="btn btn-gold btn-block"
+                >📞 Appeler maintenant</a
+              >
+
+              <div class="map-wrapper">
+                <iframe
+                  src="https://www.google.com/maps?q=8+Rue+Saint-Honor%C3%A9+75001+Paris+France&output=embed"
+                  title="Localisation de La Table Dorée sur Google Maps"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+
+            <form
+              class="contact-form"
+              id="reservationForm"
+              name="reservation"
+              method="POST"
+              action="/#contact"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="reservation" />
+              <p class="hidden-field">
+                <label
+                  >Ne pas remplir si vous êtes humain :
+                  <input name="bot-field" tabindex="-1" autocomplete="off"
+                /></label>
+              </p>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fullname">Nom complet *</label>
+                  <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Téléphone *</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    autocomplete="tel"
+                    pattern="^[0-9+()\s.-]{6,20}$"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="date">Date souhaitée *</label>
+                  <input type="date" id="date" name="date" required />
+                </div>
+                <div class="form-group">
+                  <label for="time">Heure *</label>
+                  <select id="time" name="time" required>
+                    <option value="">Choisir...</option>
+                    <option value="12:00">12h00</option>
+                    <option value="12:30">12h30</option>
+                    <option value="13:00">13h00</option>
+                    <option value="13:30">13h30</option>
+                    <option value="19:00">19h00</option>
+                    <option value="19:30">19h30</option>
+                    <option value="20:00">20h00</option>
+                    <option value="20:30">20h30</option>
+                    <option value="21:00">21h00</option>
+                    <option value="21:30">21h30</option>
+                  </select>
+                </div>
+                <div class="form-group form-group-narrow">
+                  <label for="guests">Personnes *</label>
+                  <input
+                    type="number"
+                    id="guests"
+                    name="guests"
+                    min="1"
+                    max="20"
+                    value="2"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Demandes particulières</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Allergies, occasion spéciale, préférences de placement..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-gold btn-block"
+                id="submitBtn"
+              >
+                Envoyer ma demande
+              </button>
+              <p class="form-note">
+                Vous préférez appeler ?
+                <a href="tel:+33123456789">01 23 45 67 89</a>
+              </p>
+              <p
+                class="form-feedback"
+                id="formFeedback"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bouton d'appel flottant -->
+    <a
+      href="tel:+33123456789"
+      class="floating-call"
+      aria-label="Appeler La Table Dorée"
+    >
+      <span aria-hidden="true">📞</span>
+      <span class="floating-call-pulse" aria-hidden="true"></span>
+    </a>
+
+    <!-- Retour en haut -->
+    <button
+      id="backToTop"
+      class="back-to-top"
+      aria-label="Retour en haut de page"
+    >
+      ↑
+    </button>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="brand">
+            <span class="brand-mark" aria-hidden="true">🍷</span>
+            <span class="brand-text">La Table Dorée</span>
+          </a>
+          <p>
+            Restaurant gastronomique au cœur de Paris depuis 2010. Cuisine
+            française raffinée, produits de saison et cave d'exception.
+          </p>
+          <div class="socials">
+            <a href="#" aria-label="La Table Dorée sur Instagram">📷</a>
+            <a href="#" aria-label="La Table Dorée sur Facebook">👍</a>
+            <a href="#" aria-label="La Table Dorée sur TripAdvisor">⭐</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">Présentation</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul>
+            <li>8 Rue Saint-Honoré, 75001 Paris</li>
+            <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+            <li>
+              <a href="mailto:contact@latabledoree.example"
+                >contact@latabledoree.example</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Horaires</h3>
+          <ul>
+            <li>Mar – Ven : 12h–14h30</li>
+            <li>Mar – Sam : 19h–22h30</li>
+            <li>Dim &amp; Lun : Fermé</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p>© <span id="year"></span> La Table Dorée — Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
