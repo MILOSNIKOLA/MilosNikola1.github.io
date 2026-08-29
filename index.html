@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Site Web - Portfolio Professionnel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
+    🌙
+  </button>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-wrapper">
+        <div class="logo">
+          <a href="#home">MilosNikola <span class="version">version 2.0</span></a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Web Developer Section -->
+  
+<section id="home" class="hero">
+    <div class="hero-top-section">
+      <div class="container">
+        <h2 class="hero-top-title">Web Developer</h2>
+        <p class="hero-top-subtitle">Frontend Development | Modern & Pragmatic Approach</p>
+      </div>
+    </div>
+  <!-- Hero Section -->
+  
+    <div class="hero-background">
+      <div class="hero-gradient"></div>
+      <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+    </div>
+    <div class="container" style="position: relative; z-index: 1; ">
+      <div class="hero-content">
+        <div class="hero-badge">✨ Innovation & Creativity</div>
+        <h1 class="hero-title">
+          <span class="title-line">Welcome to</span>
+          <span class="title-line highlight">my site</span>
+        </h1>
+        <p class="hero-subtitle">
+          I build modern, professional and elegant web experiences that leave
+          an impact.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">
+            <span>Contact me</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="#portfolio" class="btn btn-secondary">
+            <span>See my work</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="./img/me.jpg" alt="profile" class="hero-image-tag">
+        <div class="hero-shape">
+          <div class="shape-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">About</span>
+        <!-- <h2 class="section-title">Who am I?</h2> -->
+      </div>
+      <div class="about-content" style="text-align: center">
+        <div class="about-text">
+          <h3>Who am I?</h3>
+          <p>
+            Passionate about web and design, I create modern, high-performance
+            websites focused on real business needs. I combine creativity,
+            technical expertise and attention to detail to deliver polished,
+            user-friendly interfaces. As a full‑stack developer with a strong
+            front‑end focus, I handle both visible UX and application logic,
+            supporting projects from concept to production and helping clients
+            build a professional online presence that converts visitors.
+          </p>
+        </div>
+      </div>
+      <div class="about-text">
+        <h3>A few words about me</h3>
+        <p>
+          I am a web developer, focused on frontend development, with a modern, pragmatic, and hands-on approach.
+
+          I build functional, responsive, and well-structured websites, with particular attention to clean code,
+          readability, and user experience.
+
+          My background is unconventional, but it has helped me develop essential qualities for web development:
+          resilience, autonomy, and perseverance.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Services</span>
+        <h2 class="section-title">What I offer</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>Web Design</h3>
+          <p>Designing modern, elegant interfaces that reflect your brand.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💻</div>
+          <h3>Web Development</h3>
+          <p>
+            Building responsive, performant websites using modern
+            technologies.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📱</div>
+          <h3>Mobile First</h3>
+          <p>Optimized experiences for all devices with great usability.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Optimization</h3>
+          <p>
+            Performance improvements, SEO and loading speed optimizations.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛠️</div>
+          <h3>Maintenance</h3>
+          <p>Ongoing support and regular updates for your website.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚀</div>
+          <h3>Digital Strategy</h3>
+          <p>Consulting and guidance to improve your online presence.</p>
+        </div>
+      </div>
+      <div class="p" style="width: 70%;margin: 3rem auto 0;">
+        <strong>What I Do</strong>
+        <p>I mainly focus on:</p>
+        <ul style="text-align: left; display: inline-block;">
+          <li>Building modern websites</li>
+          <li>Responsive design (mobile / desktop)</li>
+          <li>Clean integration using HTML, CSS, and JavaScript</li>
+          <li>Continuously improving my frontend development skills</li>
+        </ul>
+        <p style="margin-top: 1.5rem;">I always prioritize quality, clarity, and steady progress over speed or quantity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">My projects</h2>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item fade-in visible" data-category="restaurant">
+          <div class="portfolio-image">
+            <div class="portfolio-overlay">
+              <h3>Restaurant Gastronomique</h3>
+              <p>Site vitrine complet pour restaurant</p>
+              <a href="restaurant/index.html" class="portfolio-link" target="_blank" rel="noopener noreferrer">View project →</a>
+            </div>
+          </div>
+          <ul class="portfolio-categories hidden">
+            <li data-type="restaurant">Restaurant</li>
+            <li data-type="artisan">Artisans</li>
+            <li data-type="coiffeur">Coiffeurs/Barbiers</li>
+            <li data-type="association">Associations</li>
+            <li data-type="coach">Coachs</li>
+            <li data-type="therapeute">Thérapeutes</li>
+            <li data-type="pme">Petites Entreprises</li>
+            <li data-type="independant">Indépendants</li>
+            <li data-type="commercant">Commerçants</li>
+            <li data-type="libéral">Professions Libérales</li>
+          </ul>
+        </div>
+        <div class="portfolio-item fade-in visible" data-category="artisan">
+          <div class="portfolio-image">
+            <div class="portfolio-overlay">
+              <h3>Artisans</h3>
+              <p>Site professionnel pour artisan</p>
+              <a href="#" class="portfolio-link">View project →</a>
+            </div>
+          </div>
+          <ul class="portfolio-categories hidden">
+            <li data-type="restaurant">Restaurant</li>
+            <li data-type="artisan">Artisans</li>
+            <li data-type="coiffeur">Coiffeurs/Barbiers</li>
+            <li data-type="association">Associations</li>
+            <li data-type="coach">Coachs</li>
+            <li data-type="therapeute">Thérapeutes</li>
+            <li data-type="pme">Petites Entreprises</li>
+            <li data-type="independant">Indépendants</li>
+            <li data-type="commercant">Commerçants</li>
+            <li data-type="libéral">Professions Libérales</li>
+          </ul>
+        </div>
+        <div class="portfolio-item fade-in visible" data-category="coiffeur">
+          <div class="portfolio-image">
+            <div class="portfolio-overlay">
+              <h3>Coiffeurs/Barbiers</h3>
+              <p>Site de salon de coiffure</p>
+              <a href="#" class="portfolio-link">View project →</a>
+            </div>
+          </div>
+          <ul class="portfolio-categories hidden">
+            <li data-type="restaurant">Restaurant</li>
+            <li data-type="artisan">Artisans</li>
+            <li data-type="coiffeur">Coiffeurs/Barbiers</li>
+            <li data-type="association">Associations</li>
+            <li data-type="coach">Coachs</li>
+            <li data-type="therapeute">Thérapeutes</li>
+            <li data-type="pme">Petites Entreprises</li>
+            <li data-type="independant">Indépendants</li>
+            <li data-type="commercant">Commerçants</li>
+            <li data-type="libéral">Professions Libérales</li>
+          </ul>
+        </div>
+        <div class="portfolio-item fade-in visible" data-category="association">
+          <div class="portfolio-image">
+            <div class="portfolio-overlay">
+              <h3>Associations</h3>
+              <p>Site pour association</p>
+              <a href="#" class="portfolio-link">View project →</a>
+            </div>
+          </div>
+          <ul class="portfolio-categories hidden">
+            <li data-type="restaurant">Restaurant</li>
+            <li data-type="artisan">Artisans</li>
+            <li data-type="coiffeur">Coiffeurs/Barbiers</li>
+            <li data-type="association">Associations</li>
+            <li data-type="coach">Coachs</li>
+            <li data-type="therapeute">Thérapeutes</li>
+            <li data-type="pme">Petites Entreprises</li>
+            <li data-type="independant">Indépendants</li>
+            <li data-type="commercant">Commerçants</li>
+            <li data-type="libéral">Professions Libérales</li>
+          </ul>
+        </div>
+        <div class="portfolio-item fade-in visible" data-category="coach">
+          <div class="portfolio-image">
+            <div class="portfolio-overlay">
+              <h3>Coachs</h3>
+              <p>Site pour coach professionnel</p>
+              <a href="#" class="portfolio-link">View project →</a>
+            </div>
+          </div>
+          <ul class="portfolio-categories hidden">
+            <li data-type="restaurant">Restaurant</li>
+            <li data-type="artisan">Artisans</li>
+            <li data-type="coiffeur">Coiffeurs/Barbiers</li>
+            <li data-type="association">Associations</li>
+            <li data-type="coach">Coachs</li>
+            <li data-type="therapeute">Thérapeutes</li>
+            <li data-type="pme">Petites Entreprises</li>
+            <li data-type="independant">Indépendants</li>
+            <li data-type="commercant">Commerçants</li>
+            <li data-type="libéral">Professions Libérales</li>
+          </ul>
+        </div>
+        <div class="portfolio-item fade-in visible" data-category="therapeute">
+          <div class="portfolio-image">
+            <div class="portfolio-overlay">
+              <h3>Thérapeutes</h3>
+              <p>Site pour praticien thérapeute</p>
+              <a href="#" class="portfolio-link">View project →</a>
+            </div>
+          </div>
+          <ul class="portfolio-categories hidden">
+            <li data-type="restaurant">Restaurant</li>
+            <li data-type="artisan">Artisans</li>
+            <li data-type="coiffeur">Coiffeurs/Barbiers</li>
+            <li data-type="association">Associations</li>
+            <li data-type="coach">Coachs</li>
+            <li data-type="therapeute">Thérapeutes</li>
+            <li data-type="pme">Petites Entreprises</li>
+            <li data-type="independant">Indépendants</li>
+            <li data-type="commercant">Commerçants</li>
+            <li data-type="libéral">Professions Libérales</li>
+          </ul>
+        </div>
+        <div class="portfolio-item fade-in visible" data-category="pme">
+          <div class="portfolio-image">
+            <div class="portfolio-overlay">
+              <h3>Petites Entreprises</h3>
+              <p>Site pour PME</p>
+              <a href="#" class="portfolio-link">View project →</a>
+            </div>
+          </div>
+          <ul class="portfolio-categories hidden">
+            <li data-type="restaurant">Restaurant</li>
+            <li data-type="artisan">Artisans</li>
+            <li data-type="coiffeur">Coiffeurs/Barbiers</li>
+            <li data-type="association">Associations</li>
+            <li data-type="coach">Coachs</li>
+            <li data-type="therapeute">Thérapeutes</li>
+            <li data-type="pme">Petites Entreprises</li>
+            <li data-type="independant">Indépendants</li>
+            <li data-type="commercant">Commerçants</li>
+            <li data-type="libéral">Professions Libérales</li>
+          </ul>
+        </div>
+        <div class="portfolio-item fade-in visible" data-category="independant">
+          <div class="portfolio-image">
+            <div class="portfolio-overlay">
+              <h3>Indépendants</h3>
+              <p>Site pour travailleur indépendant</p>
+              <a href="#" class="portfolio-link">View project →</a>
+            </div>
+          </div>
+          <ul class="portfolio-categories hidden">
+            <li data-type="restaurant">Restaurant</li>
+            <li data-type="artisan">Artisans</li>
+            <li data-type="coiffeur">Coiffeurs/Barbiers</li>
+            <li data-type="association">Associations</li>
+            <li data-type="coach">Coachs</li>
+            <li data-type="therapeute">Thérapeutes</li>
+            <li data-type="pme">Petites Entreprises</li>
+            <li data-type="independant">Indépendants</li>
+            <li data-type="commercant">Commerçants</li>
+            <li data-type="libéral">Professions Libérales</li>
+          </ul>
+        </div>
+        <div class="portfolio-item fade-in visible" data-category="commercant">
+          <div class="portfolio-image">
+            <div class="portfolio-overlay">
+              <h3>Commerçants</h3>
+              <p>Site pour commerce local</p>
+              <a href="#" class="portfolio-link">View project →</a>
+            </div>
+          </div>
+          <ul class="portfolio-categories hidden">
+            <li data-type="restaurant">Restaurant</li>
+            <li data-type="artisan">Artisans</li>
+            <li data-type="coiffeur">Coiffeurs/Barbiers</li>
+            <li data-type="association">Associations</li>
+            <li data-type="coach">Coachs</li>
+            <li data-type="therapeute">Thérapeutes</li>
+            <li data-type="pme">Petites Entreprises</li>
+            <li data-type="independant">Indépendants</li>
+            <li data-type="commercant">Commerçants</li>
+            <li data-type="libéral">Professions Libérales</li>
+          </ul>
+        </div>
+        <div class="portfolio-item fade-in visible" data-category="libéral">
+          <div class="portfolio-image">
+            <div class="portfolio-overlay">
+              <h3>Professions Libérales</h3>
+              <p>Site pour profession libérale</p>
+              <a href="#" class="portfolio-link">View project →</a>
+            </div>
+          </div>
+          <ul class="portfolio-categories hidden">
+            <li data-type="restaurant">Restaurant</li>
+            <li data-type="artisan">Artisans</li>
+            <li data-type="coiffeur">Coiffeurs/Barbiers</li>
+            <li data-type="association">Associations</li>
+            <li data-type="coach">Coachs</li>
+            <li data-type="therapeute">Thérapeutes</li>
+            <li data-type="pme">Petites Entreprises</li>
+            <li data-type="independant">Indépendants</li>
+            <li data-type="commercant">Commerçants</li>
+            <li data-type="libéral">Professions Libérales</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Let's work together</h2>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Contact information</h3>
+          <p>Feel free to reach out to discuss your project.</p>
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <strong>Email:</strong>
+              <a href="mailto:contact@monsite.com">contact@monsite.com</a>
+            </div>
+            <div class="contact-detail-item">
+              <strong>Phone:</strong>
+              <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+            </div>
+            <div class="contact-detail-item">
+              <strong>Address:</strong>
+              <span>123 Example Street, 75000 Paris, France</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <!-- Footer -->
+          <footer class="footer">
+      </div>
+  </section>
+
+  <h3>MySite</h3>
+  <p>Creator of modern, professional websites.</p>
+  <div class="container">
+    <div class="footer-content">
+      <h4>Navigation</h4>
+      <h3>MonSite</h3>
+      <li style="list-style-type: none!important;"><a href="#home">Home</a></li>
+      <li style="list-style-type: none!important;"><a href="#about">About</a></li>
+      <li style="list-style-type: none!important;"><a href="#services">Services</a></li>
+      <li style="list-style-type: none!important;"><a href="#portfolio">Portfolio</a></li>
+      <li style="list-style-type: none!important;"><a href="#contact">Contact</a></li>
+      <li style="list-style-type: none!important;"><a href="#home">Accueil</a></li>
+      <li style="list-style-type: none!important;"><a href="#about">À propos</a></li>
+      <li style="list-style-type: none!important;"><a href="#services">Services</a></li>
+      <h4>Social</h4>
+      <li style="list-style-type: none!important;"><a href="#contact">Contact</a></li>
+      <a href="#" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+      <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
+      <a href="#" class="social-link" aria-label="GitHub">GitHub</a>
+      <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
+        <a href="#" class="social-link" aria-label="GitHub">GitHub</a>
+        <p>&copy; 2024 MySite. All rights reserved.</p>
+        >Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 MonSite. Tous droits réservés.</p>
+  </div>
+  </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
