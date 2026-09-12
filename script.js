@@ -271,8 +271,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 // Portfolio Categories Dropdown - Gestion du clic
+const categoriesList = document.querySelector(".portfolio-categories");
+
 document.querySelectorAll(".portfolio-item").forEach((item) => {
-  const categoriesList = item.querySelector(".portfolio-categories");
 
   // Clic sur l'item portfolio
   item.addEventListener("click", (e) => {
@@ -281,32 +282,18 @@ document.querySelectorAll(".portfolio-item").forEach((item) => {
       return; // Laisser le lien fonctionner normalement
     }
 
-    // Fermer tous les autres menus
-    document.querySelectorAll(".portfolio-categories").forEach((list) => {
-      if (list !== categoriesList) {
-        list.classList.add("hidden");
-      }
-    });
-
-    // Basculer le menu de cet item
+    // Basculer le menu des catégories
     categoriesList.classList.toggle("hidden");
     e.stopPropagation();
   });
+});
 
-  // Gestion du clic sur un élément de catégorie
-  categoriesList.querySelectorAll("li").forEach((li) => {
-    li.addEventListener("click", (e) => {
-      const selectedType = li.getAttribute("data-type");
-      console.log("Catégorie sélectionnée:", selectedType);
-
-      // Ici vous pouvez ajouter une logique pour filtrer/naviguer
-      // Par exemple : rediriger vers une page ou charger du contenu spécifique
-
-      // Optionnel : fermer la liste après sélection
-      // categoriesList.classList.add("hidden");
-
-      e.stopPropagation();
-    });
+// Gestion du clic sur un élément de catégorie
+categoriesList.querySelectorAll("li").forEach((li) => {
+  li.addEventListener("click", (e) => {
+    const selectedType = li.getAttribute("data-type");
+    console.log("Catégorie sélectionnée:", selectedType);
+    e.stopPropagation();
   });
 });
 
