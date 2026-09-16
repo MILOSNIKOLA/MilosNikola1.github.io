@@ -7,56 +7,6 @@ hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
-// Theme (Jour / Nuit) - bascule et persistance
-
-function applyTheme(theme, toggleEl) {
-  if (theme === "light") {
-    document.documentElement.setAttribute("data-theme", "light");
-    if (toggleEl) {
-      toggleEl.textContent = "🌞";
-      toggleEl.setAttribute("aria-pressed", "true");
-    }
-  } else {
-    document.documentElement.removeAttribute("data-theme");
-    if (toggleEl) {
-      toggleEl.textContent = "🌙";
-      toggleEl.setAttribute("aria-pressed", "false");
-    }
-  }
-  try {
-    localStorage.setItem("theme", theme);
-  } catch (e) {
-    // ignore
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const themeToggle = document.getElementById("themeToggle");
-  const saved = localStorage.getItem("theme");
-  const prefersLight =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: light)").matches;
-  const initial = saved || (prefersLight ? "light" : "dark");
-  applyTheme(initial, themeToggle);
-
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      const isLight =
-        document.documentElement.getAttribute("data-theme") === "light";
-      const next = isLight ? "dark" : "light";
-      applyTheme(next, themeToggle);
-    });
-
-    // Keyboard support (Enter / Space)
-    themeToggle.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        themeToggle.click();
-      }
-    });
-  }
-});
-
 // Fermer le menu mobile quand on clique sur un lien
 document.querySelectorAll(".nav-link").forEach((link) => {
   link.addEventListener("click", () => {
@@ -274,7 +224,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 const categoriesList = document.querySelector(".portfolio-categories");
 
 document.querySelectorAll(".portfolio-item").forEach((item) => {
-
   // Clic sur l'item portfolio
   item.addEventListener("click", (e) => {
     // Vérifier que ce n'est pas un clic sur le lien "View project"
