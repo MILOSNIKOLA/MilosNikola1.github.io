@@ -98,6 +98,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (heroBadge) {
     heroBadge.style.animation = "fadeInDown 0.8s ease 0.2s both";
   }
+
+  // Initialize Hero typing animation
+  initCodeTyping();
+
+  // Initialize About section animations
+  initAboutAnimations();
 });
 
 // Animation des statistiques (compteur) avec effet d'accélération
@@ -274,3 +280,282 @@ window.addEventListener("scroll", () => {
     shape.style.transform = `translateY(${scrolled * speed}px)`;
   });
 });
+
+// Hero Code Window - Typing Effect Animation
+function initCodeTyping() {
+  const codeContent = document.getElementById("codeContent");
+
+  if (!codeContent) return;
+
+  // Check prefers-reduced-motion inside the function
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+
+  // Define code line structure with tokens
+  const codeLineStructure = [
+    [
+      { text: "&lt;div", class: "code-tag" },
+      { text: " ", class: "" },
+      { text: "class", class: "code-attr" },
+      { text: "=", class: "" },
+      { text: '"website"', class: "code-string" },
+      { text: "&gt;", class: "code-tag" },
+    ],
+    [
+      { text: "&nbsp;&nbsp;", class: "" },
+      { text: "&lt;h1&gt;", class: "code-tag" },
+      { text: "Your Business", class: "code-text" },
+      { text: "&lt;/h1&gt;", class: "code-tag" },
+    ],
+    [
+      { text: "&nbsp;&nbsp;", class: "" },
+      { text: "&lt;p&gt;", class: "code-tag" },
+      { text: "Modern digital...", class: "code-text" },
+      { text: "&lt;/p&gt;", class: "code-tag" },
+    ],
+    [
+      { text: "&nbsp;&nbsp;", class: "" },
+      { text: "&lt;button&gt;", class: "code-tag" },
+      { text: "Discover", class: "code-text" },
+      { text: "&lt;/button&gt;", class: "code-tag" },
+    ],
+    [{ text: "&lt;/div&gt;", class: "code-tag" }],
+  ];
+
+  // If prefers-reduced-motion, display all at once
+  if (prefersReducedMotion) {
+    codeLineStructure.forEach((lineTokens) => {
+      const lineEl = document.createElement("div");
+      lineEl.className = "hero-code-line";
+
+      lineTokens.forEach((token) => {
+        if (token.class) {
+          const span = document.createElement("span");
+          span.className = token.class;
+          span.innerHTML = token.text;
+          lineEl.appendChild(span);
+        } else {
+          lineEl.innerHTML += token.text;
+        }
+      });
+
+      codeContent.appendChild(lineEl);
+    });
+    return;
+  }
+
+  // Typing animation with token-based rendering
+  let lineIndex = 0;
+  let tokenIndex = 0;
+  let charIndex = 0;
+  const typingSpeed = 30; // ms between characters
+
+  function typeNextCharacter() {
+    if (lineIndex >= codeLineStructure.length) {
+      return; // Typing finished
+    }
+
+    const lineTokens = codeLineStructure[lineIndex];
+
+    // Get or create line element
+    let lineEl = codeContent.querySelector(
+      `.hero-code-line:nth-child(${lineIndex + 1})`,
+    );
+    if (!lineEl) {
+      lineEl = document.createElement("div");
+      lineEl.className = "hero-code-line";
+      codeContent.appendChild(lineEl);
+    }
+
+    // Get current token
+    if (tokenIndex >= lineTokens.length) {
+      // Line complete, move to next
+      lineIndex++;
+      tokenIndex = 0;
+      charIndex = 0;
+      setTimeout(() => {
+        typeNextCharacter();
+      }, typingSpeed * 3); // Pause between lines
+      return;
+    }
+
+    const currentToken = lineTokens[tokenIndex];
+    let tokenSpan = lineEl.querySelector(`.token-${tokenIndex}`);
+
+    // Create token span if needed
+    if (!tokenSpan) {
+      tokenSpan = document.createElement("span");
+      tokenSpan.className = `token-${tokenIndex} ${currentToken.class}`;
+      tokenSpan.setAttribute("data-token-index", tokenIndex);
+      lineEl.appendChild(tokenSpan);
+    }
+
+    // Add character to token
+    if (charIndex < currentToken.text.length) {
+      const displayedText = currentToken.text.substring(0, charIndex + 1);
+      tokenSpan.innerHTML = displayedText;
+      charIndex++;
+
+      setTimeout(() => {
+        typeNextCharacter();
+      }, typingSpeed);
+    } else {
+      // Token complete, move to next
+      tokenIndex++;
+      charIndex = 0;
+      setTimeout(() => {
+        typeNextCharacter();
+      }, typingSpeed);
+    }
+  }
+
+  // Start typing after a short delay
+  setTimeout(() => {
+    typeNextCharacter();
+  }, 600);
+}
+
+// ========================================
+// ABOUT SECTION - SCROLL TRIGGERED ANIMATIONS
+// ========================================
+
+// Initialize About section animations with Intersection Observer
+function initAboutAnimations() {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+
+  // Observer for main About fade-in sections
+  const observerOptions = {
+    threshold: 0.01,
+    rootMargin: "0px 0px 0px 0px",
+  };
+
+  const aboutObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Stagger animation with delay
+        const delay = prefersReducedMotion ? 0 : index * 100;
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, delay);
+
+        // Only observe once
+        aboutObserver.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all main About fade-in sections
+  const aboutFadeInSections = document.querySelectorAll(".about-fade-in");
+  aboutFadeInSections.forEach((section) => {
+    aboutObserver.observe(section);
+  });
+
+  // Observer for tech cards (staggered animation)
+  const techCardObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const techCards = document.querySelectorAll(".about-tech-fade-in");
+          techCards.forEach((card, index) => {
+            const delay = prefersReducedMotion ? 0 : index * 80;
+            setTimeout(() => {
+              card.classList.add("visible");
+            }, delay);
+          });
+
+          // Only observe once
+          techCardObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.01, rootMargin: "0px 0px 0px 0px" },
+  );
+
+  const techSection = document.querySelector(".about-technologies");
+  if (techSection) {
+    techCardObserver.observe(techSection);
+  }
+
+  // Observer for Timeline animation
+  const timelineObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Animate timeline line
+          const timelineLine = document.querySelector(".timeline-line");
+          if (timelineLine) {
+            timelineLine.classList.add("visible");
+          }
+
+          // Animate timeline items with stagger
+          const timelineItems = document.querySelectorAll(
+            ".about-timeline-item",
+          );
+          timelineItems.forEach((item, index) => {
+            const delay = prefersReducedMotion ? 0 : index * 150;
+            setTimeout(() => {
+              item.classList.add("visible");
+            }, delay);
+          });
+
+          // Only observe once
+          timelineObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.01, rootMargin: "0px 0px 0px 0px" },
+  );
+
+  const timelineContainer = document.querySelector(".timeline-container");
+  if (timelineContainer) {
+    timelineObserver.observe(timelineContainer);
+  }
+
+  // Observer for Approach cards
+  const approachCardObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const approachCards = document.querySelectorAll(
+            ".about-approach-card-fade",
+          );
+          approachCards.forEach((card, index) => {
+            const delay = prefersReducedMotion ? 0 : index * 120;
+            setTimeout(() => {
+              card.classList.add("visible");
+            }, delay);
+          });
+
+          // Only observe once
+          approachCardObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.01, rootMargin: "0px 0px 0px 0px" },
+  );
+
+  const approachSection = document.querySelector(".about-methodology");
+  if (approachSection) {
+    approachCardObserver.observe(approachSection);
+  }
+
+  // Fallback: if elements are not visible after 2 seconds, show them anyway
+  setTimeout(() => {
+    const unfadedElements = document.querySelectorAll(
+      ".about-fade-in:not(.visible), .about-tech-fade-in:not(.visible), .about-approach-card-fade:not(.visible), .about-timeline-item:not(.visible)",
+    );
+    if (unfadedElements.length > 0) {
+      // Show all unfaded elements immediately
+      document
+        .querySelectorAll(
+          ".about-fade-in, .about-tech-fade-in, .about-approach-card-fade, .about-timeline-item, .timeline-line",
+        )
+        .forEach((el) => {
+          el.classList.add("visible");
+        });
+    }
+  }, 2000);
+}
