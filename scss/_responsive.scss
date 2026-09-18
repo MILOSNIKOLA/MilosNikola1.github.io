@@ -73,8 +73,9 @@
   }
 
   .contact-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr ;
     gap: 3rem;
+    
   }
 
   .section-title {
@@ -84,6 +85,7 @@
   .services-grid,
   .portfolio-grid {
     grid-template-columns: 1fr;
+    margin-top: 2rem;
   }
 }
 

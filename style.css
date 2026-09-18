@@ -879,6 +879,8 @@ section {
 
 .section-header {
   text-align: center;
+  margin-top: -3rem;
+  margin-bottom: 8.375rem;
 }
 
 .section-label {
