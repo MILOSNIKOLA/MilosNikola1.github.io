@@ -67,11 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(card);
   });
 
-  // Animer les items de portfolio
+  // Afficher tous les items de portfolio avec fade-in et visible
   const portfolioItems = document.querySelectorAll(".portfolio-item");
   portfolioItems.forEach((item) => {
     item.classList.add("fade-in");
-    observer.observe(item);
+    item.classList.add("visible");
   });
 
   // Animer les stats
@@ -559,3 +559,50 @@ function initAboutAnimations() {
     }
   }, 2000);
 }
+
+// Portfolio Auto-Scroll with Hover Control
+function initPortfolioAutoScroll() {
+  const portfolioGrid = document.querySelector(".portfolio-grid");
+  if (!portfolioGrid) return;
+
+  const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+  // Duplicate items for seamless loop
+  const itemsClone = Array.from(portfolioItems).map((item) =>
+    item.cloneNode(true),
+  );
+  itemsClone.forEach((clone) => {
+    portfolioGrid.appendChild(clone);
+  });
+
+  // Get all items including clones
+  const allItems = document.querySelectorAll(".portfolio-item");
+
+  // Pause scroll on hover
+  allItems.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      portfolioGrid.classList.add("paused");
+    });
+
+    item.addEventListener("mouseleave", () => {
+      portfolioGrid.classList.remove("paused");
+    });
+  });
+
+  // Reset scroll position seamlessly
+  portfolioGrid.addEventListener("scroll", () => {
+    const scrollLeft = portfolioGrid.scrollLeft;
+    const scrollWidth = portfolioGrid.scrollWidth;
+    const clientWidth = portfolioGrid.clientWidth;
+
+    // If scrolled past the middle, reset to beginning for seamless loop
+    if (scrollLeft > scrollWidth / 2) {
+      portfolioGrid.scrollLeft = 0;
+    }
+  });
+}
+
+// Initialize portfolio auto-scroll when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  initPortfolioAutoScroll();
+});
