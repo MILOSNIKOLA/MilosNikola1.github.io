@@ -1090,6 +1090,7 @@ section {
   display: flex;
   align-items: center;
   margin-bottom: 0.75rem;
+  white-space: nowrap;
 }
 
 .code-line:last-child {
