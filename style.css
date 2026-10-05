@@ -1962,7 +1962,7 @@ section {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   width: 100%;
-  animation: autoScroll 60s linear infinite;
+  animation: autoScroll 30s linear infinite;
   scrollbar-width: none;
 }
 
