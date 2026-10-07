@@ -1,398 +1,506 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Site Web - Portfolio Professionnel</title>
+    <meta
+      name="description"
+      content="Développeur web Front-End : sites modernes, rapides et responsives pour valoriser votre activité."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mon Site Web - Portfolio Professionnel</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-</head>
-
-<body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <div class="nav-wrapper">
-        <div class="logo">
-          <a href="#home">MilosNikola <span class="version">version 3.0</span></a>
-        </div>
-        <ul class="nav-menu">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Web Developer Section -->
-
-  <section id="home" class="hero">
-    <div class="hero-background">
-      <div class="hero-gradient"></div>
-      <div  class="floating-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-      </div>
-    </div>
-    <div class="container" style="position: relative; z-index: 1;">
-      <div class="hero-content">
-        <span class="hero-label">DÉVELOPPEUR WEB FRONT-END</span>
-        <h1 class="hero-title">Je crée des sites modernes pour valoriser votre activité.</h1>
-        <p class="hero-description">Sites rapides, responsives et pensés pour offrir une expérience claire et professionnelle.</p>
-        <div class="hero-buttons">
-          <a href="#portfolio" class="btn btn-primary">
-            Voir mes projets
-          </a>
-          <a href="#contact" class="btn btn-secondary">
-            Me contacter
-          </a>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-wrapper">
+          <div class="logo">
+            <a href="#home"
+              >MilosNikola <span class="version">version 3.4</span></a
+            >
+          </div>
+          <ul class="nav-menu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#portfolio" class="nav-link">Solutions Rapides</a></li>
+            <li>
+              <a href="#solutions-sur-mesure" class="nav-link"
+                >Solutions Sur Mesure</a
+              >
+            </li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
-      <div class="hero-code-window">
-        <div class="hero-code-laptop">
-          <div class="laptop-body">
-            <div class="laptop-screen">
-              <div class="hero-code-header">
-                <div class="header-dots">
-                  <span class="header-dot"></span>
-                  <span class="header-dot"></span>
-                  <span class="header-dot"></span>
+    </nav>
+
+    <!-- Web Developer Section -->
+
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="hero-gradient"></div>
+        <div class="floating-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+        </div>
+      </div>
+      <div class="container" style="position: relative; z-index: 1">
+        <div class="hero-content">
+          <span class="hero-label">DÉVELOPPEUR WEB FRONT-END</span>
+          <h1 class="hero-title">
+            Je crée des sites modernes pour valoriser votre activité.
+          </h1>
+          <p class="hero-description">
+            Sites rapides, responsives et pensés pour offrir une expérience
+            claire et professionnelle.
+          </p>
+          <div class="hero-buttons">
+            <a href="#portfolio" class="btn btn-primary"> Voir mes projets </a>
+            <a href="#contact" class="btn btn-secondary"> Me contacter </a>
+          </div>
+        </div>
+        <div class="hero-code-window">
+          <div class="hero-code-laptop">
+            <div class="laptop-body">
+              <div class="laptop-screen">
+                <div class="hero-code-header">
+                  <div class="header-dots">
+                    <span class="header-dot"></span>
+                    <span class="header-dot"></span>
+                    <span class="header-dot"></span>
+                  </div>
+                  <span class="header-filename">index.html</span>
                 </div>
-                <span class="header-filename">index.html</span>
-              </div>
-              <div class="hero-code-editor">
-                <div class="hero-code-content" id="codeContent"></div>
-                <span class="hero-code-cursor" id="codeCursor">|</span>
+                <div class="hero-code-editor">
+                  <div class="hero-code-content" id="codeContent"></div>
+                  <span class="hero-code-cursor" id="codeCursor">|</span>
+                </div>
               </div>
             </div>
+            <div class="laptop-bottom"></div>
           </div>
-          <div class="laptop-bottom"></div>
-        </div>
-        <div class="hero-code-preview" id="codePreview">
-          <div class="preview-content">
-            <h2 class="preview-title">Your Business</h2>
-            <p class="preview-subtitle">Modern digital experience</p>
-            <button class="preview-button">Discover</button>
+          <div class="hero-code-preview" id="codePreview">
+            <div class="preview-content">
+              <h2 class="preview-title">Your Business</h2>
+              <p class="preview-subtitle">Modern digital experience</p>
+              <button class="preview-button">Discover</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About -->
-  <section id="about" class="about">
-    <div class="container">
-      <!-- Section Header -->
-      <div class="section-header">
-        <span class="section-label">ABOUT</span>
-        <h2 class="section-title">Qui suis-je ?</h2>
-      </div>
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-label">ABOUT</span>
+          <h2 class="section-title">Qui suis-je ?</h2>
+        </div>
 
-      <!-- 1. Who Am I - Two Column Layout -->
-      <div class="about-intro about-fade-in">
-        <div class="about-intro-content">
-          <h3 class="about-intro-title">Développeur Web Front-End</h3>
-          <p class="about-intro-text">
-            Je suis développeur web autodidacte, avec une forte orientation Front-End. Je me suis formé notamment avec OpenClassrooms, mais surtout à travers la pratique et la réalisation de mes propres projets.
+        <!-- 1. Who Am I - Two Column Layout -->
+        <div class="about-intro about-fade-in">
+          <div class="about-intro-content">
+            <h3 class="about-intro-title">Développeur Web Front-End</h3>
+            <p class="about-intro-text">
+              Je suis développeur web autodidacte, avec une forte orientation
+              Front-End. Je me suis formé notamment avec OpenClassrooms, mais
+              surtout à travers la pratique et la réalisation de mes propres
+              projets.
+            </p>
+            <p class="about-intro-text">
+              Je travaille principalement avec HTML, CSS et JavaScript, avec une
+              attention particulière portée au responsive design, à l'expérience
+              utilisateur et à la qualité des interfaces.
+            </p>
+            <p class="about-intro-text">
+              Au fil de mes projets, j'ai également exploré React et Next.js, le
+              SEO, les API, Git et GitHub, ainsi que différents outils liés au
+              développement web moderne et à l'intelligence artificielle.
+            </p>
+          </div>
+          <div class="about-intro-visual">
+            <div class="about-visual-element">
+              <div class="visual-code-block">
+                <div class="code-line">
+                  <span class="code-tag">&lt;div class=</span
+                  ><span class="code-string">"web"</span
+                  ><span class="code-tag">&gt;</span>
+                </div>
+                <div class="code-line">
+                  <span class="code-text"> </span
+                  ><span class="code-tag">&lt;h1&gt;</span
+                  ><span class="code-text">Votre activité</span
+                  ><span class="code-tag">&lt;/h1&gt;</span>
+                </div>
+                <div class="code-line">
+                  <span class="code-text"> </span
+                  ><span class="code-tag">&lt;p&gt;</span
+                  ><span class="code-text"
+                    >Un site moderne et professionnel</span
+                  ><span class="code-tag">&lt;/p&gt;</span>
+                </div>
+                <div class="code-line">
+                  <span class="code-text"> </span
+                  ><span class="code-tag">&lt;button&gt;</span
+                  ><span class="code-text">Découvrir</span
+                  ><span class="code-tag">&lt;/button&gt;</span>
+                </div>
+                <div class="code-line">
+                  <span class="code-tag">&lt;/div&gt;</span>
+                </div>
+              </div>
+              <div class="visual-gradient"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. About Me - Working Approach -->
+        <div class="about-approach-section about-fade-in">
+          <h2 class="about-section-title">Quelques mots sur moi</h2>
+          <p class="about-approach-text">
+            Je suis quelqu'un de curieux et autonome, et j'aime apprendre en
+            construisant des projets concrets. Le développement web me plaît
+            particulièrement pour cette possibilité de partir d'une idée et d'en
+            faire une interface réellement fonctionnelle.
           </p>
-          <p class="about-intro-text">
-            Je travaille principalement avec HTML, CSS et JavaScript, avec une attention particulière portée au responsive design, à l'expérience utilisateur et à la qualité des interfaces.
+          <p class="about-approach-text">
+            Je travaille de manière simple et pragmatique : comprendre le
+            besoin, chercher une solution adaptée, tester, corriger et
+            améliorer. J'accorde de l'importance aux détails, à la qualité du
+            code et à une expérience agréable sur tous les écrans, du smartphone
+            à l'ordinateur.
           </p>
-          <p class="about-intro-text">
-            Au fil de mes projets, j'ai également exploré React et Next.js, le SEO, les API, Git et GitHub, ainsi que différents outils liés au développement web moderne et à l'intelligence artificielle.
-          </p>
-        </div>
-        <div class="about-intro-visual">
-          <div class="about-visual-element">
-            <div class="visual-code-block">
-              <div class="code-line">
-                <span class="code-tag">&lt;div class=</span><span class="code-string">"web"</span><span class="code-tag">&gt;</span>
-              </div>
-              <div class="code-line">
-                <span class="code-text">  </span><span class="code-tag">&lt;h1&gt;</span><span class="code-text">Votre activité</span><span class="code-tag">&lt;/h1&gt;</span>
-              </div>
-              <div class="code-line">
-                <span class="code-text">  </span><span class="code-tag">&lt;p&gt;</span><span class="code-text">Un site moderne et professionnel</span><span class="code-tag">&lt;/p&gt;</span>
-              </div>
-              <div class="code-line">
-                <span class="code-text">  </span><span class="code-tag">&lt;button&gt;</span><span class="code-text">Découvrir</span><span class="code-tag">&lt;/button&gt;</span>
-              </div>
-              <div class="code-line">
-                <span class="code-tag">&lt;/div&gt;</span>
-              </div>
-            </div>
-            <div class="visual-gradient"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2. About Me - Working Approach -->
-      <div class="about-approach-section about-fade-in">
-        <h2 class="about-section-title">Quelques mots sur moi</h2>
-        <p class="about-approach-text">
-          Je suis quelqu'un de curieux et autonome, et j'aime apprendre en construisant des projets concrets. Le développement web me plaît particulièrement pour cette possibilité de partir d'une idée et d'en faire une interface réellement fonctionnelle.
-        </p>
-        <p class="about-approach-text">
-          Je travaille de manière simple et pragmatique : comprendre le besoin, chercher une solution adaptée, tester, corriger et améliorer. J'accorde de l'importance aux détails, à la qualité du code et à une expérience agréable sur tous les écrans, du smartphone à l'ordinateur.
-        </p>
-        <p class="about-approach-text">
-          Je continue à apprendre et à expérimenter de nouvelles technologies et de nouveaux outils, notamment autour du développement web et de l'intelligence artificielle.
-        </p>
-      </div>
-
-      <!-- 3. Technologies & Tools -->
-      <div class="about-technologies about-fade-in">
-        <h2 class="about-section-title">Technologies & outils</h2>
-        
-        <div class="about-tech-categories">
-          <div class="about-tech-category">
-            <h3 class="about-tech-category-title">Principales</h3>
-            <div class="about-tech-grid">
-              <div class="about-tech-card about-tech-fade-in">
-                <div class="about-tech-icon">📝</div>
-                <h4>HTML5</h4>
-                <p>Structure sémantique et moderne</p>
-              </div>
-              <div class="about-tech-card about-tech-fade-in">
-                <div class="about-tech-icon">🎨</div>
-                <h4>CSS3</h4>
-                <p>Styles modernes et animations fluides</p>
-              </div>
-              <div class="about-tech-card about-tech-fade-in">
-                <div class="about-tech-icon">⚡</div>
-                <h4>JavaScript</h4>
-                <p>Interfaces interactives et dynamiques</p>
-              </div>
-              <div class="about-tech-card about-tech-fade-in">
-                <div class="about-tech-icon">📱</div>
-                <h4>Responsive Design</h4>
-                <p>Adaptées à tous les écrans</p>
-              </div>
-              <div class="about-tech-card about-tech-fade-in">
-                <div class="about-tech-icon">🔗</div>
-                <h4>Git / GitHub</h4>
-                <p>Gestion de versions et projets</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="about-tech-category">
-            <h3 class="about-tech-category-title">En développement</h3>
-            <div class="about-tech-grid">
-              <div class="about-tech-card about-tech-fade-in about-tech-exploring">
-                <div class="about-tech-icon">⚛️</div>
-                <h4>React</h4>
-                <p>Librairie pour interfaces dynamiques</p>
-              </div>
-              <div class="about-tech-card about-tech-fade-in about-tech-exploring">
-                <div class="about-tech-icon">▶️</div>
-                <h4>Next.js</h4>
-                <p>Framework React full-stack</p>
-              </div>
-              <div class="about-tech-card about-tech-fade-in about-tech-exploring">
-                <div class="about-tech-icon">🔌</div>
-                <h4>APIs</h4>
-                <p>Intégration et données externes</p>
-              </div>
-              <div class="about-tech-card about-tech-fade-in about-tech-exploring">
-                <div class="about-tech-icon">🔍</div>
-                <h4>SEO</h4>
-                <p>Optimisation pour moteurs de recherche</p>
-              </div>
-              <div class="about-tech-card about-tech-fade-in about-tech-exploring">
-                <div class="about-tech-icon">🤖</div>
-                <h4>AI Tools</h4>
-                <p>Intelligence artificielle et aide au développement</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4. Journey Timeline -->
-      <div class="about-timeline about-fade-in">
-        <h2 class="about-section-title">Mon parcours</h2>
-        
-        <div class="timeline-container">
-          <div class="timeline-line"></div>
-          
-          <div class="timeline-items">
-            <div class="timeline-item about-timeline-item">
-              <div class="timeline-marker">
-                <span class="timeline-number">01</span>
-              </div>
-              <div class="timeline-content">
-                <h3>Formation</h3>
-                <p><strong>OpenClassrooms</strong></p>
-                <p>Formation et apprentissage des fondamentaux du développement web.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item about-timeline-item">
-              <div class="timeline-marker">
-                <span class="timeline-number">02</span>
-              </div>
-              <div class="timeline-content">
-                <h3>Pratique</h3>
-                <p><strong>Projets personnels</strong></p>
-                <p>Mise en pratique à travers différents projets web et interfaces.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item about-timeline-item">
-              <div class="timeline-marker">
-                <span class="timeline-number">03</span>
-              </div>
-              <div class="timeline-content">
-                <h3>Front-End</h3>
-                <p><strong>HTML • CSS • JavaScript</strong></p>
-                <p>Approfondissement du développement d'interfaces modernes, responsive et interactives.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item about-timeline-item">
-              <div class="timeline-marker">
-                <span class="timeline-number">04</span>
-              </div>
-              <div class="timeline-content">
-                <h3>Applications Web</h3>
-                <p><strong>Projets plus complets</strong></p>
-                <p>Création d'applications avec davantage de fonctionnalités, de logique et d'interactions.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item about-timeline-item">
-              <div class="timeline-marker">
-                <span class="timeline-number">05</span>
-              </div>
-              <div class="timeline-content">
-                <h3>Web moderne</h3>
-                <p><strong>React • Next.js • API • SEO</strong></p>
-                <p>Exploration de technologies et pratiques utilisées dans le développement web moderne.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item about-timeline-item">
-              <div class="timeline-marker">
-                <span class="timeline-number">06</span>
-              </div>
-              <div class="timeline-content">
-                <h3>IA & outils modernes</h3>
-                <p><strong>AI-Assisted Development</strong></p>
-                <p>Utilisation de l'intelligence artificielle comme outil d'aide au développement, à la recherche, au prototypage et à la résolution de problèmes.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5. My Approach -->
-      <div class="about-methodology about-fade-in">
-        <h2 class="about-section-title">Mon approche</h2>
-        
-        <div class="about-approach-cards">
-          <div class="about-approach-card about-approach-card-fade">
-            <div class="approach-number">01</div>
-            <h3 class="approach-title">Comprendre</h3>
-            <p class="approach-description">Je commence par comprendre le besoin, l'activité et l'objectif du projet.</p>
-          </div>
-
-          <div class="about-approach-card about-approach-card-fade">
-            <div class="approach-number">02</div>
-            <h3 class="approach-title">Construire</h3>
-            <p class="approach-description">Je transforme l'idée en une interface claire, responsive et fonctionnelle.</p>
-          </div>
-
-          <div class="about-approach-card about-approach-card-fade">
-            <div class="approach-number">03</div>
-            <h3 class="approach-title">Améliorer</h3>
-            <p class="approach-description">Je teste, corrige et améliore progressivement le résultat.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Services</span>
-        <h2 class="section-title">Ce que je propose</h2>
-      </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🎨</div>
-          <h3>Conception web</h3>
-          <p>Concevoir des interfaces modernes et élégantes qui reflètent votre entreprise.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">💻</div>
-          <h3>Développement web</h3>
-          <p>
-            Créer des sites web responsives et performants en utilisant des technologies modernes.
+          <p class="about-approach-text">
+            Je continue à apprendre et à expérimenter de nouvelles technologies
+            et de nouveaux outils, notamment autour du développement web et de
+            l'intelligence artificielle.
           </p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">📱</div>
-          <h3>Responsive web design</h3>
-          <p>Expériences optimisées pour tous les appareils avec une grande convivialité.</p>
+
+        <!-- 3. Technologies & Tools -->
+        <div class="about-technologies about-fade-in">
+          <h2 class="about-section-title">Technologies & outils</h2>
+
+          <div class="about-tech-categories">
+            <div class="about-tech-category">
+              <h3 class="about-tech-category-title">Principales</h3>
+              <div class="about-tech-grid">
+                <div class="about-tech-card about-tech-fade-in">
+                  <div class="about-tech-icon">📝</div>
+                  <h4>HTML5</h4>
+                  <p>Structure sémantique et moderne</p>
+                </div>
+                <div class="about-tech-card about-tech-fade-in">
+                  <div class="about-tech-icon">🎨</div>
+                  <h4>CSS3</h4>
+                  <p>Styles modernes et animations fluides</p>
+                </div>
+                <div class="about-tech-card about-tech-fade-in">
+                  <div class="about-tech-icon">⚡</div>
+                  <h4>JavaScript</h4>
+                  <p>Interfaces interactives et dynamiques</p>
+                </div>
+                <div class="about-tech-card about-tech-fade-in">
+                  <div class="about-tech-icon">📱</div>
+                  <h4>Responsive Design</h4>
+                  <p>Adaptées à tous les écrans</p>
+                </div>
+                <div class="about-tech-card about-tech-fade-in">
+                  <div class="about-tech-icon">🔗</div>
+                  <h4>Git / GitHub</h4>
+                  <p>Gestion de versions et projets</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-tech-category">
+              <h3 class="about-tech-category-title">En développement</h3>
+              <div class="about-tech-grid">
+                <div
+                  class="about-tech-card about-tech-fade-in about-tech-exploring"
+                >
+                  <div class="about-tech-icon">⚛️</div>
+                  <h4>React</h4>
+                  <p>Librairie pour interfaces dynamiques</p>
+                </div>
+                <div
+                  class="about-tech-card about-tech-fade-in about-tech-exploring"
+                >
+                  <div class="about-tech-icon">▶️</div>
+                  <h4>Next.js</h4>
+                  <p>Framework React full-stack</p>
+                </div>
+                <div
+                  class="about-tech-card about-tech-fade-in about-tech-exploring"
+                >
+                  <div class="about-tech-icon">🔌</div>
+                  <h4>APIs</h4>
+                  <p>Intégration et données externes</p>
+                </div>
+                <div
+                  class="about-tech-card about-tech-fade-in about-tech-exploring"
+                >
+                  <div class="about-tech-icon">🔍</div>
+                  <h4>SEO</h4>
+                  <p>Optimisation pour moteurs de recherche</p>
+                </div>
+                <div
+                  class="about-tech-card about-tech-fade-in about-tech-exploring"
+                >
+                  <div class="about-tech-icon">🤖</div>
+                  <h4>AI Tools</h4>
+                  <p>Intelligence artificielle et aide au développement</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">⚡</div>
-          <h3>Optimisation</h3>
-          <p>
-            Améliorations des performances, optimisations du SEO et de la vitesse de chargement.
+
+        <!-- 4. Journey Timeline -->
+        <div class="about-timeline about-fade-in">
+          <h2 class="about-section-title">Mon parcours</h2>
+
+          <div class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-items">
+              <div class="timeline-item about-timeline-item">
+                <div class="timeline-marker">
+                  <span class="timeline-number">01</span>
+                </div>
+                <div class="timeline-content">
+                  <h3>Formation</h3>
+                  <p><strong>OpenClassrooms</strong></p>
+                  <p>
+                    Formation et apprentissage des fondamentaux du développement
+                    web.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item about-timeline-item">
+                <div class="timeline-marker">
+                  <span class="timeline-number">02</span>
+                </div>
+                <div class="timeline-content">
+                  <h3>Pratique</h3>
+                  <p><strong>Projets personnels</strong></p>
+                  <p>
+                    Mise en pratique à travers différents projets web et
+                    interfaces.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item about-timeline-item">
+                <div class="timeline-marker">
+                  <span class="timeline-number">03</span>
+                </div>
+                <div class="timeline-content">
+                  <h3>Front-End</h3>
+                  <p><strong>HTML • CSS • JavaScript</strong></p>
+                  <p>
+                    Approfondissement du développement d'interfaces modernes,
+                    responsive et interactives.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item about-timeline-item">
+                <div class="timeline-marker">
+                  <span class="timeline-number">04</span>
+                </div>
+                <div class="timeline-content">
+                  <h3>Applications Web</h3>
+                  <p><strong>Projets plus complets</strong></p>
+                  <p>
+                    Création d'applications avec davantage de fonctionnalités,
+                    de logique et d'interactions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item about-timeline-item">
+                <div class="timeline-marker">
+                  <span class="timeline-number">05</span>
+                </div>
+                <div class="timeline-content">
+                  <h3>Web moderne</h3>
+                  <p><strong>React • Next.js • API • SEO</strong></p>
+                  <p>
+                    Exploration de technologies et pratiques utilisées dans le
+                    développement web moderne.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item about-timeline-item">
+                <div class="timeline-marker">
+                  <span class="timeline-number">06</span>
+                </div>
+                <div class="timeline-content">
+                  <h3>IA & outils modernes</h3>
+                  <p><strong>AI-Assisted Development</strong></p>
+                  <p>
+                    Utilisation de l'intelligence artificielle comme outil
+                    d'aide au développement, à la recherche, au prototypage et à
+                    la résolution de problèmes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. My Approach -->
+        <div class="about-methodology about-fade-in">
+          <h2 class="about-section-title">Mon approche</h2>
+
+          <div class="about-approach-cards">
+            <div class="about-approach-card about-approach-card-fade">
+              <div class="approach-number">01</div>
+              <h3 class="approach-title">Comprendre</h3>
+              <p class="approach-description">
+                Je commence par comprendre le besoin, l'activité et l'objectif
+                du projet.
+              </p>
+            </div>
+
+            <div class="about-approach-card about-approach-card-fade">
+              <div class="approach-number">02</div>
+              <h3 class="approach-title">Construire</h3>
+              <p class="approach-description">
+                Je transforme l'idée en une interface claire, responsive et
+                fonctionnelle.
+              </p>
+            </div>
+
+            <div class="about-approach-card about-approach-card-fade">
+              <div class="approach-number">03</div>
+              <h3 class="approach-title">Améliorer</h3>
+              <p class="approach-description">
+                Je teste, corrige et améliore progressivement le résultat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Services</span>
+          <h2 class="section-title">Ce que je propose</h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3>Conception web</h3>
+            <p>
+              Concevoir des interfaces modernes et élégantes qui reflètent votre
+              entreprise.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>Développement web</h3>
+            <p>
+              Créer des sites web responsives et performants en utilisant des
+              technologies modernes.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">📱</div>
+            <h3>Responsive web design</h3>
+            <p>
+              Expériences optimisées pour tous les appareils avec une grande
+              convivialité.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3>Optimisation</h3>
+            <p>
+              Améliorations des performances, optimisations du SEO et de la
+              vitesse de chargement.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🛠️</div>
+            <h3>Maintenance</h3>
+            <p>
+              Assistance continue et mises à jour régulières pour votre site
+              web.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🚀</div>
+            <h3>Stratégie numérique</h3>
+            <p>
+              Conseil et accompagnement pour améliorer votre présence en ligne
+              via les reseaux sociaux.
+            </p>
+          </div>
+        </div>
+        <div class="p" style="width: 70%; margin: 3rem auto 0">
+          <strong style="margin-bottom: 1rem; display: block"
+            >Ce que je fais:</strong
+          >
+          <p style="margin-bottom: 1rem">
+            Je me concentre principalement sur les aspects de la conception et
+            du développement web.
+          </p>
+          <ul style="text-align: left; display: inline-block">
+            <li>
+              Création de sites web modernes, Design responsive (mobile /
+              desktop)
+            </li>
+            <li>Intégration propre utilisant HTML, CSS et JavaScript</li>
+            <li>
+              Amélioration continue de mes compétences en développement frontend
+            </li>
+          </ul>
+          <p style="margin-top: 1.5rem">
+            Ma priorité : un code propre, une structure claire et un travail
+            soigné, sans jamais sacrifier la qualité à la vitesse.
           </p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🛠️</div>
-          <h3>Maintenance</h3>
-          <p>Assistance continue et mises à jour régulières pour votre site web.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🚀</div>
-          <h3>Stratégie numérique</h3>
-          <p>Conseil et accompagnement pour améliorer votre présence en ligne via les reseaux sociaux.</p>
-        </div>
       </div>
-      <div class="p" style="width: 70%;margin: 3rem auto 0;">
-        <strong style="margin-bottom: 1rem; display: block;">Ce que je fais:</strong>
-        <p style="margin-bottom: 1rem;">Je me concentre principalement sur les aspects de la conception et du développement web.</p>
-        <ul style="text-align: left; display: inline-block;">
-          <li>Création de sites web modernes,
-          Design responsive (mobile / desktop)</li>
-          <li>Intégration propre utilisant HTML, CSS et JavaScript</li>
-          <li>Amélioration continue de mes compétences en développement frontend</li>
-        </ul>
-        <p style="margin-top: 1.5rem;">Ma priorité : un code propre, une structure claire et un travail soigné, sans jamais sacrifier la qualité à la vitesse.
-        </p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Portfolio -->
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Solutions Rapides</span>
-        <h2 class="section-title">Je crée des sites modernes pour valoriser votre activité.
-        </h2>
-        <h3>Sites rapides, responsives et conçus pour présenter efficacement votre activité.</h3>
-      </div>
-      <!-- <ul class="portfolio-categories hidden">
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Solutions Rapides</span>
+          <h2 class="section-title">
+            Je crée des sites modernes pour valoriser votre activité.
+          </h2>
+          <h3>
+            Sites rapides, responsives et conçus pour présenter efficacement
+            votre activité.
+          </h3>
+        </div>
+        <!-- <ul class="portfolio-categories hidden">
         <li data-type="restaurant">Restaurant</li>
         <li data-type="artisan">Artisans</li>
         <li data-type="coiffeur">Coiffeurs/Barbiers</li>
@@ -404,262 +512,361 @@
         <li data-type="commercant">Commerçants</li>
         <li data-type="libéral">Professions Libérales</li>
       </ul> -->
-      <div class="portfolio-grid">
-        <div class="portfolio-item fade-in visible" data-category="restauran"t>
-          <div class="portfolio-image">
-            <div class="portfolio-overlay">
-              <h3>Restaurant Gastronomique</h3>
-              <p>Site vitrine complet pour restaurant</p>
-              <a href="restaurant/index.html" class="portfolio-link 1" target="_blank" rel="noopener noreferrer">View
-                project →</a>
+        <div class="portfolio-grid">
+          <div
+            class="portfolio-item fade-in visible"
+            data-category="restaurant"
+          >
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3>Restaurant Gastronomique</h3>
+                <p>Site vitrine complet pour restaurant</p>
+                <a
+                  href="restaurant/index.html"
+                  class="portfolio-link 1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project →</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-        <div class="portfolio-item fade-in visible" data-category="artisan">
-          <div class="portfolio-image">
-            <div class="portfolio-overlay">
-              <h3>Artisans</h3>
-              <p>Site professionnel pour artisan</p>
-              <a href="artisans/index.html" class="portfolio-link 2" target="_blank" rel="noopener noreferrer">View
-                project →</a>
+          <div class="portfolio-item fade-in visible" data-category="artisan">
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3>Artisans</h3>
+                <p>Site professionnel pour artisan</p>
+                <a
+                  href="artisans/index.html"
+                  class="portfolio-link 2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project →</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-        <div class="portfolio-item fade-in visible" data-category="coiffeur">
-          <div class="portfolio-image">
-            <div class="portfolio-overlay">
-              <h3>Coiffeurs/Barbiers</h3>
-              <p>Site de salon de coiffure</p>
-              <a href="coiffeur/index.html" class="portfolio-link 3" target="_blank" rel="noopener noreferrer">View
-                project →</a>
+          <div class="portfolio-item fade-in visible" data-category="coiffeur">
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3>Coiffeurs/Barbiers</h3>
+                <p>Site de salon de coiffure</p>
+                <a
+                  href="coiffeur/index.html"
+                  class="portfolio-link 3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project →</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-        <div class="portfolio-item fade-in visible" data-category="association">
-          <div class="portfolio-image">
-            <div class="portfolio-overlay">
-              <h3>Associations</h3>
-              <p>Site pour association</p>
-              <a href="association/index.html" class="portfolio-link 4" target="_blank" rel="noopener noreferrer">View
-                project →</a>
+          <div
+            class="portfolio-item fade-in visible"
+            data-category="association"
+          >
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3>Associations</h3>
+                <p>Site pour association</p>
+                <a
+                  href="association/index.html"
+                  class="portfolio-link 4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project →</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-        <div class="portfolio-item fade-in visible" data-category="coach">
-          <div class="portfolio-image">
-            <div class="portfolio-overlay">
-              <h3>Coachs</h3>
-              <p>Site pour coach professionnel</p>
-              <a href="coach/index.html" class="portfolio-link 5" target="_blank" rel="noopener noreferrer">View project
-                →</a>
+          <div class="portfolio-item fade-in visible" data-category="coach">
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3>Coachs</h3>
+                <p>Site pour coach professionnel</p>
+                <a
+                  href="coach/index.html"
+                  class="portfolio-link 5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project →</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-        <div class="portfolio-item fade-in visible" data-category="therapeute">
-          <div class="portfolio-image">
-            <div class="portfolio-overlay">
-              <h3>Thérapeutes</h3>
-              <p>Site pour praticien thérapeute</p>
-              <a href="therapeute/index.html" class="portfolio-link 6" target="_blank" rel="noopener noreferrer">View
-                project →</a>
+          <div
+            class="portfolio-item fade-in visible"
+            data-category="therapeute"
+          >
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3>Thérapeutes</h3>
+                <p>Site pour praticien thérapeute</p>
+                <a
+                  href="therapeute/index.html"
+                  class="portfolio-link 6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project →</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-        <div class="portfolio-item fade-in visible" data-category="pme">
-          <div class="portfolio-image">
-            <div class="portfolio-overlay">
-              <h3>Petites Entreprises</h3>
-              <p>Site pour PME</p>
-              <a href="pme/index.html" class="portfolio-link 7" target="_blank" rel="noopener noreferrer">View project
-                →</a>
+          <div class="portfolio-item fade-in visible" data-category="pme">
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3>Petites Entreprises</h3>
+                <p>Site pour PME</p>
+                <a
+                  href="pme/index.html"
+                  class="portfolio-link 7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project →</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-        <div class="portfolio-item fade-in visible" data-category="independant">
-          <div class="portfolio-image">
-            <div class="portfolio-overlay">
-              <h3>Indépendants</h3>
-              <p>Site pour travailleur indépendant</p>
-              <a href="independant/index.html" class="portfolio-link 8" target="_blank" rel="noopener noreferrer">View
-                project →</a>
+          <div
+            class="portfolio-item fade-in visible"
+            data-category="independant"
+          >
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3>Indépendants</h3>
+                <p>Site pour travailleur indépendant</p>
+                <a
+                  href="independant/index.html"
+                  class="portfolio-link 8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project →</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-        <div class="portfolio-item fade-in visible" data-category="commercant">
-          <div class="portfolio-image">
-            <div class="portfolio-overlay">
-              <h3>Commerçants</h3>
-              <p>Site pour commerce local</p>
-              <a href="commercant/index.html" class="portfolio-link 9" target="_blank" rel="noopener noreferrer">View
-                project →</a>
+          <div
+            class="portfolio-item fade-in visible"
+            data-category="commercant"
+          >
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3>Commerçants</h3>
+                <p>Site pour commerce local</p>
+                <a
+                  href="commercant/index.html"
+                  class="portfolio-link 9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project →</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-        <div class="portfolio-item fade-in visible" data-category="libéral">
-          <div class="portfolio-image">
-            <div class="portfolio-overlay">
-              <h3>Professions Libérales</h3>
-              <p>Site pour profession libérale</p>
-              <a href="liberal/index.html" class="portfolio-link 10" target="_blank" rel="noopener noreferrer">View
-                project →</a>
+          <div class="portfolio-item fade-in visible" data-category="libéral">
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3>Professions Libérales</h3>
+                <p>Site pour profession libérale</p>
+                <a
+                  href="liberal/index.html"
+                  class="portfolio-link 10"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project →</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-        <div class="portfolio-item fade-in visible" data-category="libéral">
-          <div class="portfolio-image">
-            <div class="portfolio-overlay">
-              <h3>Autres secteurs d’activité ..</h3>
-              <p>Site pour profession diverse</p>
+          <div class="portfolio-item fade-in visible" data-category="libéral">
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3>Autres secteurs d’activité ..</h3>
+                <p>Site pour profession diverse</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Custom Websites Section -->
-  <section class="custom-websites">
-    <div class="container">
-      <div class="custom-websites-header">
-        <span class="section-label">SOLUTIONS SUR MESURE</span>
-        <h2 class="section-title">Des sites personnalisés, pensés pour votre activité</h2>
-        <p class="custom-websites-description">
-          Un site personnalisé va plus loin qu'un simple site vitrine. Il est conçu autour de votre activité, de vos
-          objectifs et de votre identité. Chaque élément peut être adapté à vos besoins : design, fonctionnalités,
-          navigation et expérience utilisateur. Cette approche permet de créer une solution plus évolutive, plus
-          flexible et plus cohérente avec votre image professionnelle. Contrairement à une solution standardisée, votre
-          site peut évoluer avec votre entreprise et intégrer de nouvelles fonctionnalités au fil du temps. L'objectif
-          est de construire un véritable outil numérique pensé spécifiquement pour votre activité.
-        </p>
-      </div>
+    <!-- Custom Websites Section -->
+    <section id="solutions-sur-mesure" class="custom-websites">
+      <div class="container">
+        <div class="custom-websites-header">
+          <span class="section-label">SOLUTIONS SUR MESURE</span>
+          <h2 class="section-title">
+            Des sites personnalisés, pensés pour votre activité
+          </h2>
+          <p class="custom-websites-description">
+            Un site personnalisé va plus loin qu'un simple site vitrine. Il est
+            conçu autour de votre activité, de vos objectifs et de votre
+            identité. Chaque élément peut être adapté à vos besoins : design,
+            fonctionnalités, navigation et expérience utilisateur. Cette
+            approche permet de créer une solution plus évolutive, plus flexible
+            et plus cohérente avec votre image professionnelle. Contrairement à
+            une solution standardisée, votre site peut évoluer avec votre
+            entreprise et intégrer de nouvelles fonctionnalités au fil du temps.
+            L'objectif est de construire un véritable outil numérique pensé
+            spécifiquement pour votre activité.
+          </p>
+        </div>
 
-      <div class="custom-websites-gallery">
-        <div class="custom-websites-image">
-          <img src="img/custom-websites/dev-code.jpg"
-            alt="Ordinateur portable affichant du code pour le développement d'un site web" />
+        <div class="custom-websites-gallery">
+          <div class="custom-websites-image">
+            <img
+              src="img/custom-websites/dev-code.jpg"
+              loading="lazy"
+              decoding="async"
+              alt="Ordinateur portable affichant du code pour le développement d'un site web"
+            />
+          </div>
+          <div class="custom-websites-image">
+            <img
+              src="img/custom-websites/dev-coffee.jpg"
+              loading="lazy"
+              decoding="async"
+              alt="Environnement de développement avec code et mug de café"
+            />
+          </div>
+          <div class="custom-websites-image">
+            <img
+              src="img/custom-websites/dev-screen.jpg"
+              loading="lazy"
+              decoding="async"
+              alt="Bureau de développeur avec écran affichant du code"
+            />
+          </div>
         </div>
-        <div class="custom-websites-image">
-          <img src="img/custom-websites/dev-coffee.jpg" alt="Environnement de développement avec code et mug de café" />
-        </div>
-        <div class="custom-websites-image">
-          <img src="img/custom-websites/dev-screen.jpg" alt="Bureau de développeur avec écran affichant du code" />
-        </div>
-      </div>
 
-      <div class="custom-websites-benefits-header">
-        <h3>Pourquoi choisir une solution sur mesure ?</h3>
-      </div>
+        <div class="custom-websites-benefits-header">
+          <h3>Pourquoi choisir une solution sur mesure ?</h3>
+        </div>
 
-      <div class="custom-websites-benefits">
-        <div class="custom-websites-benefit">
-          <div class="benefit-icon">🎯</div>
-          <h4>Design personnalisé</h4>
-          <p>Une interface conçue autour de votre identité et de votre activité.</p>
-        </div>
-        <div class="custom-websites-benefit">
-          <div class="benefit-icon">⚙️</div>
-          <h4>Fonctionnalités adaptées</h4>
-          <p>Des fonctionnalités développées selon vos besoins réels.</p>
-        </div>
-        <div class="custom-websites-benefit">
-          <div class="benefit-icon">📈</div>
-          <h4>Évolutivité</h4>
-          <p>Une base qui peut évoluer avec votre entreprise et vos futurs projets.</p>
-        </div>
-        <div class="custom-websites-benefit fade-in">
-          <div class="benefit-icon">✨</div>
-          <h4>Expérience utilisateur</h4>
-          <p>Une navigation pensée pour offrir une expérience claire, fluide et professionnelle.</p>
+        <div class="custom-websites-benefits">
+          <div class="custom-websites-benefit">
+            <div class="benefit-icon">🎯</div>
+            <h4>Design personnalisé</h4>
+            <p>
+              Une interface conçue autour de votre identité et de votre
+              activité.
+            </p>
+          </div>
+          <div class="custom-websites-benefit">
+            <div class="benefit-icon">⚙️</div>
+            <h4>Fonctionnalités adaptées</h4>
+            <p>Des fonctionnalités développées selon vos besoins réels.</p>
+          </div>
+          <div class="custom-websites-benefit">
+            <div class="benefit-icon">📈</div>
+            <h4>Évolutivité</h4>
+            <p>
+              Une base qui peut évoluer avec votre entreprise et vos futurs
+              projets.
+            </p>
+          </div>
+          <div class="custom-websites-benefit fade-in">
+            <div class="benefit-icon">✨</div>
+            <h4>Expérience utilisateur</h4>
+            <p>
+              Une navigation pensée pour offrir une expérience claire, fluide et
+              professionnelle.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Contact</span>
-        <h2 class="section-title">Let's work together</h2>
-      </div>
-      <div class="contact-content">
-        <div class="contact-info">
-          <h3>Contact information</h3>
-          <p>Feel free to reach out to discuss your project.</p>
-          <div class="contact-details">
-            <div class="contact-detail-item">
-              <strong>Email:</strong>
-              <a href="mailto:contact@monsite.com">contact@monsite.com</a>
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Contact</span>
+          <h2 class="section-title">Let's work together</h2>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Contact information</h3>
+            <p>Feel free to reach out to discuss your project.</p>
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <strong>Email:</strong>
+                <a href="mailto:contact@monsite.com">contact@monsite.com</a>
+              </div>
+              <div class="contact-detail-item">
+                <strong>Phone:</strong>
+                <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+              </div>
+              <div class="contact-detail-item">
+                <strong>Address:</strong>
+                <span>123 Example Street, 75000 Paris, France</span>
+              </div>
             </div>
-            <div class="contact-detail-item">
-              <strong>Phone:</strong>
-              <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" required />
             </div>
-            <div class="contact-detail-item">
-              <strong>Address:</strong>
-              <span>123 Example Street, 75000 Paris, France</span>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>MilosNikola</h3>
+            <p>Créateur de sites web modernes et professionnels.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#home">Accueil</a></li>
+              <li><a href="#about">À propos</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Solutions rapides</a></li>
+              <li><a href="#solutions-sur-mesure">Solutions sur mesure</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Réseaux</h4>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+              <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
+              <a href="#" class="social-link" aria-label="GitHub">GitHub</a>
+              <a href="#" class="social-link" aria-label="Instagram"
+                >Instagram</a
+              >
             </div>
           </div>
         </div>
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <label for="name">Full name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send message</button>
-          <!-- Footer
-      <footer class="footer">
-    </div> -->
-  </section>
-
-  <h3>MySite</h3>
-  <p>Creator of modern, professional websites.</p>
-  <div class="container">
-    <div class="footer-content">
-      <h4>Navigation</h4>
-      <h3>MonSite</h3>
-      <li style="list-style-type: none!important;"><a href="#home">Home</a></li>
-      <li style="list-style-type: none!important;"><a href="#about">About</a></li>
-      <li style="list-style-type: none!important;"><a href="#services">Services</a></li>
-      <li style="list-style-type: none!important;"><a href="#portfolio">Portfolio</a></li>
-      <li style="list-style-type: none!important;"><a href="#contact">Contact</a></li>
-      <li style="list-style-type: none!important;"><a href="#home">Accueil</a></li>
-      <li style="list-style-type: none!important;"><a href="#about">À propos</a></li>
-      <li style="list-style-type: none!important;"><a href="#services">Services</a></li>
-      <h4>Social</h4>
-      <li style="list-style-type: none!important;"><a href="#contact">Contact</a></li>
-      <a href="#" class="social-link" aria-label="LinkedIn">LinkedIn</a>
-      <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
-      <a href="#" class="social-link" aria-label="GitHub">GitHub</a>
-      <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
-      <div class="social-links">
-        <a href="#" class="social-link" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
-        <a href="#" class="social-link" aria-label="GitHub">GitHub</a>
-        <p>&copy; 2024 MySite. All rights reserved.</p>
-        >Instagram</a>
+        <div class="footer-bottom">
+          <p>&copy; 2024 MilosNikola. Tous droits réservés.</p>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2024 MonSite. Tous droits réservés.</p>
-  </div>
-  </div>
-  </footer>
+    </footer>
 
-  <script src="script.js?v=5"></script>
-</body>
-
+    <script src="script.js?v=6" defer></script>
+  </body>
 </html>
