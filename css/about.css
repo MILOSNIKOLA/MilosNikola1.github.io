@@ -1,0 +1,913 @@
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+}
+.about-text p {
+  margin-bottom: 1rem;
+  color: #e2e8f0;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+.stat-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.stat-item:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.6),
+    0 10px 10px -5px rgba(0, 0, 0, 0.4);
+  border-color: #818cf8;
+}
+.stat-item:hover::before {
+  transform: scaleX(1);
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.stat-label {
+  color: #e2e8f0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   NEW ABOUT SECTION - COMPREHENSIVE REDESIGN
+   ======================================== */
+
+/* Base About Section */
+.about {
+  background: #1e293b;
+  padding: 6rem 0;
+}
+
+/* About Fade-in Animation Class */
+.about-fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   PART 1: INTRODUCTION - TWO COLUMN LAYOUT
+   ======================================== */
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.about-intro-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-intro-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.about-intro-text {
+  color: #e2e8f0;
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
+.about-intro-text strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.about-intro-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.about-visual-element {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.visual-code-block {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  font-family: "Fira Code", "Monaco", "Courier New", monospace;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  line-height: 1.8;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+}
+
+.code-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  white-space: nowrap;
+}
+
+.code-line:last-child {
+  margin-bottom: 0;
+}
+
+.code-tag {
+  color: #f472b6;
+  font-weight: 600;
+}
+
+.code-attr {
+  color: #a5b4fc;
+}
+
+.code-string {
+  color: #86efac;
+}
+
+.code-text {
+  color: #e2e8f0;
+}
+
+.visual-gradient {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.2) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+/* ========================================
+   PART 2: ABOUT ME - WORKING APPROACH
+   ======================================== */
+
+.about-approach-section {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  border-radius: 20px;
+  padding: 3rem;
+  margin-bottom: 5rem;
+  backdrop-filter: blur(10px);
+}
+
+.about-approach-text {
+  color: #e2e8f0;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-approach-text:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   PART 3: TECHNOLOGIES & TOOLS
+   ======================================== */
+
+.about-technologies {
+  margin-bottom: 5rem;
+}
+
+.about-tech-categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.about-tech-category {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-tech-category-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(99, 102, 241, 0.3);
+}
+
+.about-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.about-tech-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  border-radius: 16px;
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  transition:
+    all 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-tech-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-tech-card:hover::before {
+  transform: scaleX(1);
+}
+
+.about-tech-card:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+}
+
+.about-tech-card.about-tech-exploring {
+  border-color: rgba(139, 92, 246, 0.15);
+}
+
+.about-tech-card.about-tech-exploring:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+}
+
+.about-tech-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.about-tech-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.about-tech-card p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.about-tech-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: none;
+  transition:
+    opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-tech-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   PART 4: JOURNEY TIMELINE
+   ======================================== */
+
+.about-timeline {
+  margin-bottom: 5rem;
+}
+
+.timeline-container {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 0;
+  background: linear-gradient(180deg, #6366f1, #8b5cf6);
+  opacity: 0;
+  transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-line.visible {
+  opacity: 1;
+  height: 100%;
+}
+
+.timeline-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  position: relative;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.timeline-item:nth-child(odd) {
+  text-align: right;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  grid-column: 2;
+}
+
+.timeline-marker {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.timeline-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+  position: relative;
+  border: 3px solid #1e293b;
+  opacity: 0;
+  transform: scale(0.5);
+  transition:
+    opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-item.visible .timeline-number {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.timeline-content {
+  padding: 1.5rem;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-item.visible .timeline-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-content h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p:last-child {
+  margin-bottom: 0;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.timeline-content strong {
+  color: #818cf8;
+  font-weight: 600;
+}
+
+/* ========================================
+   PART 5: MY APPROACH - 3 CARDS
+   ======================================== */
+
+.about-methodology {
+  margin-bottom: 3rem;
+}
+
+.about-approach-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.about-approach-card {
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.1),
+    rgba(139, 92, 246, 0.1)
+  );
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition:
+    all 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.about-approach-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-approach-card:hover::before {
+  transform: scaleX(1);
+}
+
+.about-approach-card:hover {
+  transform: translateY(-12px);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow:
+    0 20px 25px -5px rgba(99, 102, 241, 0.2),
+    0 10px 10px -5px rgba(99, 102, 241, 0.1);
+}
+
+.approach-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.approach-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.approach-description {
+  color: #e2e8f0;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.about-approach-card-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-approach-card-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* About Section Title - Used across subsections */
+.about-section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* ========================================
+   ACCESSIBILITY: Reduced Motion Support
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-fade-in,
+  .about-tech-fade-in,
+  .about-approach-card-fade,
+  .timeline-number,
+  .timeline-content,
+  .timeline-line {
+    transition: none;
+    animation: none;
+  }
+
+  .about-fade-in.visible,
+  .about-tech-fade-in.visible,
+  .about-approach-card-fade.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .timeline-line.visible {
+    height: 100%;
+    opacity: 1;
+  }
+
+  .timeline-item.visible .timeline-number,
+  .timeline-item.visible .timeline-content {
+    opacity: 1;
+    transform: none;
+  }
+
+  .about-approach-card:hover {
+    transform: none;
+  }
+
+  .about-tech-card:hover {
+    transform: none;
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - DESKTOP (1024px+)
+   ======================================== */
+
+@media (min-width: 1024px) {
+  .about-intro {
+    gap: 4rem;
+  }
+
+  .about-tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-approach-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .timeline-items {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - TABLET (768px - 1023px)
+   ======================================== */
+
+@media (max-width: 1023px) {
+  .about {
+    padding: 4rem 0;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .about-intro-visual {
+    order: -1;
+  }
+
+  .about-section-title {
+    font-size: 1.875rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .about-tech-categories {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .about-approach-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .timeline-items {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .timeline-item {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .timeline-item:nth-child(odd) {
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content {
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(even) {
+    grid-column: 1;
+  }
+
+  .timeline-line {
+    left: 30px;
+  }
+
+  .about-approach-section {
+    padding: 2.5rem;
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE (640px - 767px)
+   ======================================== */
+
+@media (max-width: 767px) {
+  .about {
+    padding: 3rem 0;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .about-intro-title {
+    font-size: 1.75rem;
+  }
+
+  .about-intro-text {
+    font-size: 0.95rem;
+  }
+
+  .visual-code-block {
+    font-size: 0.85rem;
+    padding: 1.25rem;
+  }
+
+  .about-section-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-approach-section {
+    padding: 2rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .about-approach-text {
+    font-size: 0.95rem;
+  }
+
+  .about-tech-categories {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-tech-category-title {
+    font-size: 1.25rem;
+  }
+
+  .about-tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .about-tech-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .about-tech-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .about-tech-card h4 {
+    font-size: 0.95rem;
+  }
+
+  .about-tech-card p {
+    font-size: 0.8rem;
+  }
+
+  .timeline-items {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .timeline-line {
+    left: 25px;
+  }
+
+  .timeline-marker {
+    flex-shrink: 0;
+  }
+
+  .timeline-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .timeline-content {
+    padding: 1.25rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.85rem;
+  }
+
+  .about-approach-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-approach-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .approach-number {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .approach-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .approach-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - SMALL MOBILE (max 639px)
+   ======================================== */
+
+@media (max-width: 639px) {
+  .about {
+    padding: 2.5rem 0;
+  }
+
+  .about-intro-title {
+    font-size: 1.5rem;
+  }
+
+  .about-section-title {
+    font-size: 1.35rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .about-approach-section {
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .visual-code-block {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+
+  .about-tech-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .about-tech-card {
+    padding: 1rem 0.75rem;
+  }
+
+  .about-tech-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-number {
+    width: 45px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .timeline-line {
+    left: 20px;
+  }
+
+  .about-approach-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .approach-number {
+    font-size: 2rem;
+  }
+
+  .approach-title {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #6366f1;
+  --primary-dark: #4f46e5;
+  --primary-light: #818cf8;
+  --secondary-color: #8b5cf6;
+  --accent-color: #ec4899;
+  --text-dark: #ffffff;
+  --text-medium: #e2e8f0;
+  --text-light: #94a3b8;
+  --bg-dark: #0f172a;
+  --bg-light: #1e293b;
+  --bg-white: #1e293b;
+  --bg-section: #1e293b;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --shadow-xl:
+    0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.5);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mode sombre uniquement - pas de bouton toggle */
+
+/* Mode sombre permanent appliqué */
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: #ffffff;
+  line-height: 1.7;
+  overflow-x: hidden;
+  background: #0f172a;
+}
+
+.version {
+  font-size: 0.75rem;
+  color: #e2e8f0;
+  font-weight: 400;
+  margin-left: 0.75rem;
+  opacity: 0.7;
+  -webkit-text-fill-color: #e2e8f0;
+  vertical-align: baseline;
+  line-height: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Center lists inside any .container and remove default bullets */
+.container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.container ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+  vertical-align: middle;
+}
+
+/* Specifically remove bullets in footer navigation lists */
+.footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .footer-section ul li {
+  display: inline-block;
+  margin: 0 0.75rem;
+}
+
+/* Ensure markers are removed in footer list items (explicitly via ::marker) */
+.footer .footer-section ul li::marker {
+  content: "";
+  color: transparent;
+  font-size: 0;
+}
+
+section {
+  padding: 6rem 0;
+  position: relative;
+}
