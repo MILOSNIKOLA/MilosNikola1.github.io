@@ -279,3 +279,57 @@ function initPortfolioAutoScroll() {
 }
 
 initPortfolioAutoScroll();
+
+// ========================================
+// BLOG - FILTRES PAR CATÉGORIE
+// ========================================
+
+const blogFilters = document.querySelectorAll(".blog-filter");
+const blogCards = document.querySelectorAll(".blog-card");
+const blogUpcomingItems = document.querySelectorAll(".blog-upcoming-item");
+const blogUpcoming = document.querySelector(".blog-upcoming");
+const blogEmpty = document.querySelector(".blog-empty");
+const blogCount = document.querySelector(".blog-count");
+
+// Les compteurs viennent uniquement des cartes d'articles publiés
+function countBlogArticles(filter) {
+  return [...blogCards].filter(
+    (card) => filter === "all" || card.dataset.category === filter,
+  ).length;
+}
+
+function applyBlogFilter(filter) {
+  blogFilters.forEach((button) => {
+    const isActive = button.dataset.filter === filter;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", isActive);
+  });
+
+  let visibleArticles = 0;
+  blogCards.forEach((card) => {
+    card.hidden = filter !== "all" && card.dataset.category !== filter;
+    if (!card.hidden) visibleArticles++;
+  });
+
+  let visibleIdeas = 0;
+  blogUpcomingItems.forEach((item) => {
+    item.hidden = filter !== "all" && item.dataset.category !== filter;
+    if (!item.hidden) visibleIdeas++;
+  });
+
+  if (blogEmpty) blogEmpty.hidden = visibleArticles > 0;
+  if (blogUpcoming) blogUpcoming.hidden = visibleIdeas === 0;
+}
+
+blogFilters.forEach((button) => {
+  const badge = button.querySelector(".blog-filter-count");
+  if (badge) badge.textContent = countBlogArticles(button.dataset.filter);
+  button.addEventListener("click", () =>
+    applyBlogFilter(button.dataset.filter),
+  );
+});
+
+if (blogCount) {
+  const total = blogCards.length;
+  blogCount.textContent = `${total} article${total > 1 ? "s" : ""}`;
+}

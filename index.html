@@ -12,7 +12,21 @@
     />
     <link rel="icon" type="image/webp" href="./img/icon/milosnikola.webp" />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/navigation.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/section-header.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/services.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/custom-websites.css" />
+    <link rel="stylesheet" href="css/audit.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,7 +42,7 @@
         <div class="nav-wrapper">
           <div class="logo">
             <a href="#home"
-              >MilosNikola <span class="version">version 3.4</span></a
+              >MilosNikola <span class="version">version 3.7</span></a
             >
           </div>
           <ul class="nav-menu">
@@ -41,6 +55,7 @@
                 >Solutions Sur Mesure</a
               >
             </li>
+            <li><a href="#blog" class="nav-link">Blog</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
           <div class="hamburger">
@@ -63,7 +78,7 @@
           <div class="shape shape-3"></div>
         </div>
       </div>
-      <div class="container" style="position: relative; z-index: 1">
+      <div class="container">
         <div class="hero-content">
           <span class="hero-label">DÉVELOPPEUR WEB FRONT-END</span>
           <h1 class="hero-title">
@@ -466,15 +481,13 @@
             </p>
           </div>
         </div>
-        <div class="p" style="width: 70%; margin: 3rem auto 0">
-          <strong style="margin-bottom: 1rem; display: block"
-            >Ce que je fais:</strong
-          >
-          <p style="margin-bottom: 1rem">
+        <div class="services-note">
+          <strong class="services-note-title">Ce que je fais:</strong>
+          <p class="services-note-intro">
             Je me concentre principalement sur les aspects de la conception et
             du développement web.
           </p>
-          <ul style="text-align: left; display: inline-block">
+          <ul class="services-note-list">
             <li>
               Création de sites web modernes, Design responsive (mobile /
               desktop)
@@ -484,7 +497,7 @@
               Amélioration continue de mes compétences en développement frontend
             </li>
           </ul>
-          <p style="margin-top: 1.5rem">
+          <p class="services-note-closing">
             Ma priorité : un code propre, une structure claire et un travail
             soigné, sans jamais sacrifier la qualité à la vitesse.
           </p>
@@ -835,6 +848,191 @@
       </div>
     </section>
 
+    <!-- Blog -->
+    <section id="blog" class="blog">
+      <div class="container">
+        <div class="blog-header">
+          <span class="section-label">BLOG</span>
+          <h2 class="section-title">Conseils et actualités du web</h2>
+          <p class="custom-websites-description">
+            Des conseils pratiques pour améliorer votre site web, renforcer
+            votre présence en ligne et mieux comprendre les technologies du web.
+          </p>
+        </div>
+        <div class="blog-intro">
+          <h3 class="blog-intro-title">Le web expliqué simplement</h3>
+          <p class="blog-intro-subtitle">Blog</p>
+          <p class="blog-intro-text">
+            Des conseils pratiques pour préparer votre projet web, améliorer
+            votre site et comprendre les bases de la création web, du design et
+            du référencement naturel.
+          </p>
+        </div>
+
+        <!-- Filtres : data-filter doit correspondre au data-category des articles. Les compteurs sont recalculés par script.js. -->
+        <div
+          class="blog-filters"
+          role="group"
+          aria-label="Filtrer les articles par catégorie"
+        >
+          <button
+            type="button"
+            class="blog-filter active"
+            data-filter="all"
+            aria-pressed="true"
+          >
+            Tous <span class="blog-filter-count">1</span>
+          </button>
+          <button
+            type="button"
+            class="blog-filter"
+            data-filter="creation-web"
+            aria-pressed="false"
+          >
+            Création web <span class="blog-filter-count">0</span>
+          </button>
+          <button
+            type="button"
+            class="blog-filter"
+            data-filter="conseils"
+            aria-pressed="false"
+          >
+            Conseils <span class="blog-filter-count">1</span>
+          </button>
+          <button
+            type="button"
+            class="blog-filter"
+            data-filter="design-ux"
+            aria-pressed="false"
+          >
+            Design &amp; UX <span class="blog-filter-count">0</span>
+          </button>
+          <button
+            type="button"
+            class="blog-filter"
+            data-filter="performance"
+            aria-pressed="false"
+          >
+            Performance <span class="blog-filter-count">0</span>
+          </button>
+          <button
+            type="button"
+            class="blog-filter"
+            data-filter="seo"
+            aria-pressed="false"
+          >
+            SEO <span class="blog-filter-count">0</span>
+          </button>
+          <button
+            type="button"
+            class="blog-filter"
+            data-filter="technique"
+            aria-pressed="false"
+          >
+            Technique <span class="blog-filter-count">0</span>
+          </button>
+          <button
+            type="button"
+            class="blog-filter"
+            data-filter="accessibilite"
+            aria-pressed="false"
+          >
+            Accessibilité <span class="blog-filter-count">0</span>
+          </button>
+          <button
+            type="button"
+            class="blog-filter"
+            data-filter="business"
+            aria-pressed="false"
+          >
+            Business <span class="blog-filter-count">0</span>
+          </button>
+        </div>
+        <p class="blog-count">1 article</p>
+
+        <!--
+          Articles publiés uniquement : une carte par page d'article existante.
+          Pour publier un nouvel article : copier la carte ci-dessous, adapter
+          data-category (voir data-filter des boutons), le titre, le résumé, le
+          temps de lecture et le lien ; puis retirer le sujet correspondant de
+          la liste « Sujets à venir ». Les compteurs se mettent à jour seuls.
+        -->
+        <div class="blog-grid">
+          <article class="blog-card" data-category="conseils">
+            <div class="blog-card-icon" aria-hidden="true">🧭</div>
+            <span class="blog-category">CONSEILS</span>
+            <h3>Comment bien préparer son projet de site web</h3>
+            <p>
+              Découvrez comment définir vos objectifs, préparer vos contenus,
+              organiser vos pages et identifier les fonctionnalités nécessaires
+              avant de lancer la création de votre site web.
+            </p>
+            <div class="blog-card-footer">
+              <span class="blog-meta">6 min de lecture</span>
+              <a
+                href="blog/comment-bien-preparer-son-projet-web/index.html"
+                class="blog-link"
+                >Lire l'article →</a
+              >
+            </div>
+          </article>
+        </div>
+        <p class="blog-empty" hidden>
+          Aucun article n'est encore publié dans cette catégorie.
+        </p>
+
+        <!-- Idées de sujets : ni publiées, ni comptées. Aucun lien tant que la page n'existe pas. -->
+        <div class="blog-upcoming">
+          <h3 class="blog-upcoming-title">Sujets à venir</h3>
+          <p class="blog-upcoming-text">
+            Des idées d'articles, pas encore publiées.
+          </p>
+          <ul class="blog-upcoming-list">
+            <li class="blog-upcoming-item" data-category="creation-web">
+              <span class="blog-category">CRÉATION WEB</span>
+              Les éléments essentiels d'un site web professionnel
+            </li>
+            <li class="blog-upcoming-item" data-category="design-ux">
+              <span class="blog-category">DESIGN &amp; UX</span>
+              Pourquoi adapter son site aux mobiles ?
+            </li>
+            <li class="blog-upcoming-item" data-category="seo">
+              <span class="blog-category">SEO</span>
+              Les bases du référencement naturel
+            </li>
+            <li class="blog-upcoming-item" data-category="design-ux">
+              <span class="blog-category">DESIGN &amp; UX</span>
+              Comment améliorer l'expérience utilisateur d'un site ?
+            </li>
+            <li class="blog-upcoming-item" data-category="performance">
+              <span class="blog-category">PERFORMANCE</span>
+              Optimiser les images pour améliorer les performances
+            </li>
+            <li class="blog-upcoming-item" data-category="conseils">
+              <span class="blog-category">CONSEILS</span>
+              Comment choisir les pages nécessaires à son site ?
+            </li>
+            <li class="blog-upcoming-item" data-category="conseils">
+              <span class="blog-category">CONSEILS</span>
+              Comment préparer les textes et les images de son site ?
+            </li>
+            <li class="blog-upcoming-item" data-category="conseils">
+              <span class="blog-category">CONSEILS</span>
+              Les erreurs fréquentes d'un site vitrine
+            </li>
+            <li class="blog-upcoming-item" data-category="design-ux">
+              <span class="blog-category">DESIGN &amp; UX</span>
+              Comment organiser la navigation d'un site web ?
+            </li>
+            <li class="blog-upcoming-item" data-category="technique">
+              <span class="blog-category">TECHNIQUE</span>
+              HTML, CSS et JavaScript : à quoi servent ces technologies ?
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact -->
     <section id="contact" class="contact">
       <div class="container">
@@ -925,6 +1123,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=6" defer></script>
+    <script src="script.js?v=8" defer></script>
   </body>
 </html>
