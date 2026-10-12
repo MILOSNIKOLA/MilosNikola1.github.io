@@ -19,7 +19,8 @@
   gap: 2rem;
 }
 
-.blog-card {
+.blog-card,
+.blog-upcoming-item {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
@@ -27,7 +28,8 @@
   transition: var(--transition);
 }
 
-.blog-card:hover {
+.blog-card:hover,
+.blog-upcoming-item:hover {
   transform: translateY(-6px);
   border-color: #818cf8;
   box-shadow: var(--shadow-lg);
@@ -42,7 +44,8 @@
   letter-spacing: 0.05em;
 }
 
-.blog-card h3 {
+.blog-card h3,
+.blog-upcoming-item h4 {
   margin-bottom: 1rem;
   color: #ffffff;
   font-size: 1.35rem;
@@ -50,7 +53,8 @@
   line-height: 1.4;
 }
 
-.blog-card p {
+.blog-card p,
+.blog-upcoming-item p {
   color: #e2e8f0;
   line-height: 1.8;
 }
@@ -211,21 +215,14 @@
 
 .blog-upcoming-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
 }
 
+/* Neutralise les règles « .container ul li » pour retrouver le rendu des cartes */
 .blog-upcoming-list .blog-upcoming-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  display: block;
   margin: 0;
-  padding: 1.25rem 1.5rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px dashed rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  color: #e2e8f0;
-  line-height: 1.5;
   text-align: left;
 }
 
@@ -233,15 +230,18 @@
   display: none;
 }
 
-.blog-upcoming-item .blog-category {
-  margin-bottom: 0;
+@media (max-width: 700px) {
+  .blog-upcoming-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
   .blog {
     padding: 4rem 0;
   }
-  .blog-card {
+  .blog-card,
+  .blog-upcoming-item {
     padding: 2rem 1.5rem;
   }
 }
