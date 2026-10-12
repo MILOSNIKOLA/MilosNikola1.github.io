@@ -291,9 +291,9 @@ const blogUpcoming = document.querySelector(".blog-upcoming");
 const blogEmpty = document.querySelector(".blog-empty");
 const blogCount = document.querySelector(".blog-count");
 
-// Les compteurs viennent uniquement des cartes d'articles publiés
+// Les compteurs additionnent les articles publiés et les sujets à venir
 function countBlogArticles(filter) {
-  return [...blogCards].filter(
+  return [...blogCards, ...blogUpcomingItems].filter(
     (card) => filter === "all" || card.dataset.category === filter,
   ).length;
 }
@@ -317,7 +317,7 @@ function applyBlogFilter(filter) {
     if (!item.hidden) visibleIdeas++;
   });
 
-  if (blogEmpty) blogEmpty.hidden = visibleArticles > 0;
+  if (blogEmpty) blogEmpty.hidden = visibleArticles + visibleIdeas > 0;
   if (blogUpcoming) blogUpcoming.hidden = visibleIdeas === 0;
 }
 
@@ -330,6 +330,7 @@ blogFilters.forEach((button) => {
 });
 
 if (blogCount) {
-  const total = blogCards.length;
-  blogCount.textContent = `${total} article${total > 1 ? "s" : ""}`;
+  const published = blogCards.length;
+  const ideas = blogUpcomingItems.length;
+  blogCount.textContent = `${published} article${published > 1 ? "s" : ""} publié${published > 1 ? "s" : ""} · ${ideas} sujet${ideas > 1 ? "s" : ""} à venir`;
 }
